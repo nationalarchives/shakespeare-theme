@@ -136,7 +136,7 @@ a.button:hover {
 
 }
 
-.ticket-button {
+.navbar-fixed-top .button {
     background-color: #5e5e60;
     border: 1px solid #f1edea;
     color: #f1edea;
@@ -192,7 +192,14 @@ a.button:hover {
 .float-right {
     float: right !important;
 }
-
+.alignright{
+    float:right !important;
+    margin-left: 10px;
+}
+.alignleft{
+    float:left !important;
+    margin-right:10px;
+}
 /* padding and margins
 ===================================*/
 
@@ -206,6 +213,10 @@ a.button:hover {
 
 .padding-left-small {
     padding-left: 5px !important;
+}
+
+.padding-right-small {
+    padding-right: 5px !important;
 }
 
 .padding-extra-big {
@@ -607,6 +618,10 @@ a.button:hover {
 /* sundry styles
 ===================================*/
 
+.textwidget{
+    display:inline;
+}
+
 .border-top-dotted {
     border-top: 1px solid #5e5e60;
 }
@@ -616,10 +631,11 @@ a.button:hover {
     height: auto;
     max-width: 760px;
     border: 1px solid #c9c9c9;
+    margin: 10px;
 }
 
 
-.caption, .breadcrumb {
+.caption, .breadcrumb, .wp-caption-text {
     font-size: .9em;
     color: #5e5e60;
     display: inline-block;
@@ -823,10 +839,10 @@ a.button:hover {
     }
 
     .info {
-
         z-index: 5000;
         -webkit-box-shadow: 0px 1px 1px #5e5e60;
         -moz-box-shadow: 0px 1px 1px #5e5e60;
         box-shadow: 0px 1px 1px #5e5e60;
     }
+
 }
