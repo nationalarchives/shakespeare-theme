@@ -1,0 +1,832 @@
+/*
+* Title: By me William Shakespeare (BMWS) stylesheet v1.0
+* Created: October 2015
+* Author: The National Archives Web Team
+* Requires bootstrap.css
+*/
+
+body {
+    font-family: 'Open Sans', Arial, Verdana, 'Helvetica', 'Helvetica Neue Interface', 'Helvetica Neue', sans-serif;
+    color: #000;
+    background-color: #f1edea;
+    padding-top: 50px;
+}
+
+/* link styles
+===================================*/
+
+a:link, a:active, a:focus, a:visited {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px dotted #000;
+}
+
+a:hover {
+    color: #000;
+    text-decoration: none;
+    border-bottom: none;
+}
+
+/* palette styles
+===================================*/
+
+.base {
+    color: #f1edea;
+}
+
+.base-bg {
+    background-color: #f1edea;
+}
+
+.green {
+    color: #00da00;
+}
+
+.green-bg {
+    background-color: #00da00;
+}
+
+.green-left-border {
+    border-left: 15px solid #00da00;
+}
+
+.grey {
+    color: #5e5e60;
+}
+
+.grey-bg {
+    background-color: #5e5e60;
+}
+
+.grey-bg-desktop {
+    background-color: transparent;
+}
+
+.grey-bg-mobile {
+    background-color: #5e5e60;
+    color: #f1edea !important;
+}
+
+.grey-bg-mobile a {
+    color: #f1edea;
+    border-bottom: 1px dotted #f1edea;
+
+}
+
+.grey-bg-mobile a:hover {
+    color: #f1edea;
+    border-bottom: none;
+
+}
+.light-grey-bg{
+    background-color: #d3d3d3;
+}
+
+.black {
+    color: #000;
+}
+
+.dark-grey-bg {
+    background-color: #404040;
+}
+
+/* heading styles
+===================================*/
+
+
+h1, .h1 {
+    font-size: 2em;
+}
+h2, .h2 {
+    font-size: 2em;
+}
+h3, .h3 {
+    font-size: 1.4em;
+}
+
+/* button styles
+===================================*/
+
+.black .button, .black a .button{
+    border: 1px solid #000;
+    background-color: transparent;
+    padding: 5px;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.button, .info-box a.button, a .ticket-button {
+    border: 1px solid #fff;
+    background-color: transparent;
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+
+}
+
+a.button:hover {
+    border: 1px solid #000;
+    background-color: #000;
+    color: #f1edea;
+    text-decoration: none;
+
+}
+
+.ticket-button {
+    background-color: #5e5e60;
+    border: 1px solid #f1edea;
+    color: #f1edea;
+    float: right;
+    position: relative;
+    top: 10px;
+}
+
+
+
+/* custom responsive grid selectors
+===================================*/
+
+.wrapper{
+
+    width:100%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.half {
+    width: 100%;
+    float: left;
+}
+
+.vertical-half {
+    width: 50%;
+    float: left;
+    height: auto;
+    min-height: 150px;
+    position: relative;
+}
+
+.positioner {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.main {
+    padding: 60px 15px 0px 15px !important;
+    text-align: left;
+}
+
+/* floats
+===================================*/
+
+.float-left {
+    float: left !important;
+}
+
+.float-right {
+    float: right !important;
+}
+
+/* padding and margins
+===================================*/
+
+.padding {
+    padding: 10px !important;
+}
+
+.padding-left-extra {
+    padding-left: 15px !important;
+}
+
+.padding-left-small {
+    padding-left: 5px !important;
+}
+
+.padding-extra-big {
+    padding: 15px !important;
+}
+
+.padding-top-extra {
+    padding-top: 15px !important;
+}
+
+.padding-top-small {
+    padding-top: 5px !important;
+}
+
+/* info panel
+===================================*/
+
+.info {
+    width: 100%;
+    min-height: 50px;
+    position: relative;
+    display: inline-block;
+    padding-top: 5px;
+}
+
+.info .half {
+    width: 48%;
+}
+
+.info .half:first-of-type {
+    width: 100%;
+}
+
+.info-img {
+    width: 100%;
+    max-width: 300px;
+}
+
+.info-logos {
+    text-align: left;
+    float: left;
+    width: auto !important;
+    padding-right: 10px;
+    padding-top: 3%;
+}
+
+.info-logos a {
+    border-bottom: none !important;
+}
+
+.info-logos img {
+    max-height: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.info-logos img:first-of-type {
+    margin-right: 10px;
+}
+
+/* banner image styles
+===================================*/
+
+.main-banner {
+    background-image: url("../images/bmws-will-signature-m.jpg");
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    height: 255px;
+    max-height: 255px;
+    background-position: right;
+}
+
+.document-banner {
+    background-image: url("../images/bmws-revels.jpg");
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    height: 340px;
+    max-height: 340px;
+    background-position: center;
+}
+
+.will-banner {
+    background-image: url("../images/bmws-will-complete-m.jpg");
+    background-repeat: no-repeat;
+    background-size: cover !important;
+    height: 340px;
+    max-height: 340px;
+    background-position: center;
+}
+
+/* breadcrumb styles
+===================================*/
+
+.breadcrumb {
+    margin-top: 5px;
+}
+
+.breadcrumb a {
+    color: #5e5e60;
+    border-bottom: none;
+}
+
+.grey-bg .breadcrumb, .grey-bg .breadcrumb a, .dark-grey-bg .breadcrumb, .dark-grey-bg .breadcrumb a{
+    color: #f1edea;
+    border-bottom: none;
+}
+
+/* zoom viewer (for documents)
+===================================*/
+
+.zoom-viewer{
+    position: relative;
+    width:90%;
+    height:auto;
+    min-height: 450px;
+    max-width: 1024px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:20px;
+    margin-top: 20px;
+    border:10px solid #000;
+}
+
+.zoom-viewer img{
+    /** chrome scaled image blur fix **/
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-origin: 50% 50%;
+}
+
+.zoom-viewer .zoom-thumb{
+
+    width:100% !important;
+    height:auto !important;
+}
+
+.mag-lens {
+    box-shadow: none !important;
+    border: none !important;
+    background: transparent !important;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.mag-zoomed{
+
+    height:auto !important;
+}
+
+.zoom-controls{
+    width:60px;
+    position: absolute;
+    right: 15px;
+    top:20px;
+    background-color: rgba(0,0,0,0.8) !important;
+    padding-top:10px;
+    margin-left: auto;
+    margin-right: auto;
+    height:auto;
+    overflow: hidden;
+    z-index: 1000;
+    text-align:center;
+    border:1px solid #000;
+}
+.zoom-controls button{
+    width:40px;
+    height:40px;
+    color:#5e5e60;
+    background-color: transparent;
+    border: 1px solid #5e5e60;
+    margin-bottom: 10px;
+}
+.zoom-controls button:hover{
+    color:#f1edea;
+    border: 1px solid #5e5e60;
+    background-color:#5e5e60;
+}
+
+/* bxslider
+===================================*/
+.slide {
+    width: 100% !important;
+    max-width: 1600px;
+    background-size: cover;
+    background-position: bottom right !important;
+    background-repeat: no-repeat !important;
+    height: 355px;
+    position: relative;
+}
+
+.slide .info-box {
+    position: absolute;
+    bottom: 20px;
+    width: 80%;
+    height: auto;
+    background-color: #f1edea;
+    color: #000;
+    padding: 10px;
+    margin-left: 20px;
+    border: 1px solid #c9c9c9;
+
+}
+
+.docpager {
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.docpager a {
+    border-bottom: none !important;
+}
+
+.docthumb {
+    width: 100%;
+    max-width: 150px;
+    margin: 5px;
+    height: auto;
+    max-height: 150px;
+}
+
+.bx-wrapper .bx-pager {
+    bottom: 0px;
+}
+
+.bx-wrapper .bx-pager a {
+    border: solid #ccc 1px;
+    display: block;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.docthumb:hover {
+    border: solid #f1edea 1px !important;
+}
+
+.bx-wrapper {
+    margin-bottom: 0px !important;
+}
+
+.bx-wrapper .bx-viewport {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 0px;
+    left: 0px;
+    background: transparent !important;
+    border: 0px !important;
+
+}
+
+/* bootstrap overrides
+===================================*/
+
+.col-md-6 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-fluid {
+    max-width: 1600px;
+    padding: 0px;
+}
+
+/* jumbotron tweaks
+===================================*/
+
+.jumbotron {
+    width: 100%;
+    max-width: 1600px;
+    background-position: top right;
+    height: 250px;
+    border-radius: 0px;
+    margin-bottom: 0px;
+}
+
+.jumbotron .info-box {
+    width: 80%;
+    height: auto;
+    background-color: #f1edea;
+    color: #000;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.jumbotron .info-box p, .slide .info-box p {
+    font-size: 1em !important;
+}
+
+.jumbotron .info-box h2, .slide .info-box h2 {
+    font-size: 24px;
+}
+
+/* navigation overrides and styling
+===================================*/
+
+.navbar .container-fluid {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navbar-toggle {
+    float: left;
+    border: 0px;
+}
+
+.navbar-inverse {
+    background-color: #5e5e60;
+    border-color: #5e5e60;
+    width:100%;
+    max-width: 1600px !important;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+    color: #fff;
+    background-color: #777777;
+    border-bottom: 1px solid #777777;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #f1edea;
+    border-bottom: none;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: transparent !important;
+}
+
+.navbar {
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+}
+
+.navbar-nav {
+    margin: 0px -10px;
+}
+
+.nav > li {
+    position: relative;
+    display: block;
+    border-bottom: 1px solid #777777;
+    -webkit-transition: background-color 100ms linear;
+    -moz-transition: background-color 100ms linear;
+    -o-transition: background-color 100ms linear;
+    -ms-transition: background-color 100ms linear;
+    transition: background-color 100ms linear;
+    border-right: 1px solid #5e5e60 !important;
+}
+
+.nav > li:hover {
+    position: relative;
+    display: block;
+    background-color: #777777;
+    border-bottom: 1px solid #777777;
+    -webkit-transition: background-color 100ms linear;
+    -moz-transition: background-color 100ms linear;
+    -o-transition: background-color 100ms linear;
+    -ms-transition: background-color 100ms linear;
+    transition: background-color 100ms linear;
+    border-right: 1px solid #5e5e60 !important;
+}
+
+
+/* theme styles
+===================================*/
+
+.theme{
+
+    width:95%;
+    max-width: 400px;
+    height:300px;
+    min-height: 200px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.theme .caption{
+    width:100%;
+    text-align: left;
+    display: inline-block;
+    padding: 5px;
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+    background-color: #f1edea;
+    max-width: 400px;
+}
+
+
+/* sundry styles
+===================================*/
+
+.border-top-dotted {
+    border-top: 1px solid #5e5e60;
+}
+
+.inline-img {
+    width: 100%;
+    height: auto;
+    max-width: 760px;
+    border: 1px solid #c9c9c9;
+}
+
+
+.caption, .breadcrumb {
+    font-size: .9em;
+    color: #5e5e60;
+    display: inline-block;
+    background-color: transparent;
+    padding: 0px;
+    margin-bottom: 0px;
+    list-style: none;
+    border-radius: 0px;
+}
+
+.border-none {
+    border: 0 !important;
+}
+
+.s400 {
+    width: 100%;
+    max-width: 120px;
+}
+
+.position-bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+#plus-info {
+    display: none;
+}
+
+.price {
+    font-size: 2em;
+}
+
+.title-img {
+    display: none;
+}
+.clearfix-padding{
+    clear: both;
+    padding-top: 10px;
+}
+
+/* media queries
+===================================*/
+
+@media (max-width: 768px) {
+
+    .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+        background-color: #5e5e60;
+    }
+
+    .navbar-toggle .icon-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 0px;
+        background-color: #5e5e60;
+    }
+
+    .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+        color: #f1edea;
+        background-color: transparent;
+        font-weight: bold;
+    }
+
+    body {
+        padding-top: 0px;
+    }
+
+    .navbar-fixed-top {
+        position: relative;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .zoom-viewer {
+        height: 640px;
+
+    }
+    #plus-info {
+        display: block;
+    }
+
+    .jumbotron {
+
+        border-radius: 0px;
+        margin-bottom: 0px;
+        position: relative;
+    }
+
+    .jumbotron .info-box {
+        width: 30%;
+        height: auto;
+        background-color: #f1edea;
+        padding: 10px;
+        position: absolute;
+        left: 5%;
+        bottom: 5%;
+        margin: 0px;
+        margin: 0px;
+
+    }
+
+    .slide .info-box {
+        width: 40%;
+        position: absolute;
+        right: 20px !important;
+        bottom: 20px;
+
+    }
+
+    .main-banner {
+        background-image: url("../images/bmws-will-signature.jpg");
+        background-size: cover !important;
+        height: 340px;
+        max-height: 340px;
+        background-position: right;
+    }
+
+    .document-banner {
+        background-image: url("../images/bmws-revels.jpg");
+        background-size: cover !important;
+        height: 340px;
+        max-height: 340px;
+        background-position: center;
+    }
+
+    .will-banner {
+        background-image: url("../images/bmws-will-complete.jpg");
+        background-size: cover !important;
+        height: 340px;
+        max-height: 340px;
+        background-position: bottom right;
+    }
+
+    .grey-bg-desktop {
+        background-color: #5e5e60;
+    }
+
+    .grey-bg-mobile {
+        background-color: transparent;
+        color: #000 !important;
+    }
+
+    .grey-bg-mobile a {
+        color: #000;
+        border-bottom: 1px dotted #000;
+
+    }
+
+    .grey-bg-mobile a:hover {
+        color: #000;
+        border-bottom: none;
+
+    }
+
+    .vertical-half {
+        width: 100%;
+        height: auto;
+        min-height: 230px;
+        position: relative;
+    }
+
+    .half {
+        width: 50%;
+        float: left;
+    }
+
+    .positioner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .info {
+        width: 100%;
+        min-height: 50px;
+        position: fixed;
+        display: inline-block;
+    }
+
+    .title-img {
+        width: 80%;
+        max-width: 968px;
+        margin-left: 0px;
+        display: block;
+        padding-top:70px;
+    }
+
+    .info-logos {
+        text-align: right;
+        float: right;
+        padding-top: 0%;
+    }
+
+    .info .half:first-of-type {
+        width: 48%;
+    }
+
+    .info {
+
+        z-index: 5000;
+        -webkit-box-shadow: 0px 1px 1px #5e5e60;
+        -moz-box-shadow: 0px 1px 1px #5e5e60;
+        box-shadow: 0px 1px 1px #5e5e60;
+    }
+}
