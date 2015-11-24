@@ -16,7 +16,7 @@ get_header(); ?>
 
 
 
-    <div class="jumbotron main main-banner" style="">
+    <div class="jumbotron main main-banner">
 
         <img src="<?php bloginfo('template_directory'); ?>/images/bmws-by-me-william-shakespeare.png" title="By me William Shakespeare" class="title-img">
 
@@ -71,9 +71,9 @@ get_header(); ?>
         </div>
         <div class="half green-left-border padding padding-left-extra float-left equalbox">
             <h2><?php the_title(); ?></h2>
-            <?php edit_post_link(); ?>
-            <?php the_content(); ?>
 
+            <?php the_content(); ?>
+            <?php edit_post_link('Edit this page','<span class="edit-button">','</span>'); ?>
 
         </div>
 

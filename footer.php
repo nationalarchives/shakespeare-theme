@@ -1,4 +1,4 @@
-<div class="container-fluid border-top-dotted">
+<div class="container-fluid">
 
     <div class="col-xs-6 green-left-border text-left padding">
 
@@ -50,7 +50,7 @@
 
 <?php
 
-if (is_page("shakespeares-will") or is_page_template("document-zoom.php")){
+if (is_page_template("will.php") or is_page_template("document-zoom.php")){
 
 ?>
 
@@ -77,10 +77,11 @@ if (is_page("shakespeares-will") or is_page_template("document-zoom.php")){
         $host = $('[mag-thumb="controls"]');
         $host.mag({
             mode:'inner',
+            initialShow: 'thumb',
             toggle: false,
             position: 'drag',
             positionEvent: 'move',
-            zoomMax: 5,
+            zoomMax: 4,
             smooth: 'true'
 
         });
