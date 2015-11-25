@@ -110,17 +110,19 @@ h3, .h3 {
 .black .button, .black a .button{
     border: 1px solid #000;
     background-color: transparent;
-    padding: 5px;
+    padding: 10px;
     color: #000;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
+    font-size: 1.2em;
+    white-space: nowrap;
 }
 
 a.button, .info-box a.button, a .ticket-button {
     border: 1px solid #fff;
     background-color: transparent;
-    padding: 5px;
+    padding: 10px;
     color: #fff;
     cursor: pointer;
     text-decoration: none;
@@ -133,18 +135,25 @@ a.button:hover {
     background-color: #000;
     color: #f1edea;
     text-decoration: none;
-
 }
 
-.ticket-button {
+.navbar-fixed-top .button {
     background-color: #5e5e60;
     border: 1px solid #f1edea;
     color: #f1edea;
     float: right;
     position: relative;
     top: 10px;
+    padding:5px !important;
 }
+span.edit-button{
+    border:1px solid #000;
+    padding:10px;
+    margin-bottom: 20px;
+    display : inline-block;
+    width:auto;
 
+}
 
 
 /* custom responsive grid selectors
@@ -167,7 +176,7 @@ a.button:hover {
     width: 50%;
     float: left;
     height: auto;
-    min-height: 150px;
+    min-height: 160px;
     position: relative;
 }
 
@@ -192,7 +201,14 @@ a.button:hover {
 .float-right {
     float: right !important;
 }
-
+.alignright{
+    float:right !important;
+    margin-left: 10px;
+}
+.alignleft{
+    float:left !important;
+    margin-right:10px;
+}
 /* padding and margins
 ===================================*/
 
@@ -208,6 +224,10 @@ a.button:hover {
     padding-left: 5px !important;
 }
 
+.padding-right-small {
+    padding-right: 5px !important;
+}
+
 .padding-extra-big {
     padding: 15px !important;
 }
@@ -219,7 +239,9 @@ a.button:hover {
 .padding-top-small {
     padding-top: 5px !important;
 }
-
+.padding-top-medium {
+    padding-top:10px !important;
+}
 /* info panel
 ===================================*/
 
@@ -249,7 +271,7 @@ a.button:hover {
     float: left;
     width: auto !important;
     padding-right: 10px;
-    padding-top: 3%;
+    padding-top: 0px;
 }
 
 .info-logos a {
@@ -321,7 +343,7 @@ a.button:hover {
     width:90%;
     height:auto;
     min-height: 450px;
-    max-width: 1024px;
+    max-width: 1280px;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
@@ -471,6 +493,7 @@ a.button:hover {
 .container-fluid {
     max-width: 1600px;
     padding: 0px;
+    margin-top:0px;
 }
 
 /* jumbotron tweaks
@@ -483,6 +506,7 @@ a.button:hover {
     height: 250px;
     border-radius: 0px;
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 .jumbotron .info-box {
@@ -607,6 +631,10 @@ a.button:hover {
 /* sundry styles
 ===================================*/
 
+.textwidget{
+    display:inline;
+}
+
 .border-top-dotted {
     border-top: 1px solid #5e5e60;
 }
@@ -616,10 +644,11 @@ a.button:hover {
     height: auto;
     max-width: 760px;
     border: 1px solid #c9c9c9;
+    margin: 10px;
 }
 
 
-.caption, .breadcrumb {
+.caption, .breadcrumb, .wp-caption-text {
     font-size: .9em;
     color: #5e5e60;
     display: inline-block;
@@ -823,10 +852,14 @@ a.button:hover {
     }
 
     .info {
-
         z-index: 5000;
         -webkit-box-shadow: 0px 1px 1px #5e5e60;
         -moz-box-shadow: 0px 1px 1px #5e5e60;
         box-shadow: 0px 1px 1px #5e5e60;
     }
+
+    .info-logos img {
+        max-height: 60px;
+    }
+
 }
