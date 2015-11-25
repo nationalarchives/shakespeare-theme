@@ -70,10 +70,10 @@
         <div class="container-fluid base-bg green-left-border info">
 
             <div class="half float-left padding-left-small">
-                <div class="float-left padding-top-small">
+                <div class="float-left padding-top-medium">
                     <img src="<?php bloginfo('template_directory'); ?>/images/bmws-by-me-william-shakespeare.png" title="By me William Shakespeare" class="info-img">
                 </div>
-                <div class="float-left padding-top-small padding-left-small">
+                <div class="float-left padding-top-medium padding-left-small">
                     <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Exhibition Date')) : ?>
                         <b> <?php dynamic_sidebar( 'Exhibition Date' ); ?></b>
 

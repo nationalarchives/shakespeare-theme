@@ -110,17 +110,19 @@ h3, .h3 {
 .black .button, .black a .button{
     border: 1px solid #000;
     background-color: transparent;
-    padding: 5px;
+    padding: 10px;
     color: #000;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
+    font-size: 1.2em;
+    white-space: nowrap;
 }
 
 a.button, .info-box a.button, a .ticket-button {
     border: 1px solid #fff;
     background-color: transparent;
-    padding: 5px;
+    padding: 10px;
     color: #fff;
     cursor: pointer;
     text-decoration: none;
@@ -142,6 +144,7 @@ a.button:hover {
     float: right;
     position: relative;
     top: 10px;
+    padding:5px !important;
 }
 span.edit-button{
     border:1px solid #000;
@@ -173,7 +176,7 @@ span.edit-button{
     width: 50%;
     float: left;
     height: auto;
-    min-height: 150px;
+    min-height: 160px;
     position: relative;
 }
 
@@ -236,7 +239,9 @@ span.edit-button{
 .padding-top-small {
     padding-top: 5px !important;
 }
-
+.padding-top-medium {
+    padding-top:10px !important;
+}
 /* info panel
 ===================================*/
 
@@ -266,7 +271,7 @@ span.edit-button{
     float: left;
     width: auto !important;
     padding-right: 10px;
-    padding-top: 3%;
+    padding-top: 0px;
 }
 
 .info-logos a {
@@ -851,6 +856,10 @@ span.edit-button{
         -webkit-box-shadow: 0px 1px 1px #5e5e60;
         -moz-box-shadow: 0px 1px 1px #5e5e60;
         box-shadow: 0px 1px 1px #5e5e60;
+    }
+
+    .info-logos img {
+        max-height: 60px;
     }
 
 }

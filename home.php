@@ -34,7 +34,7 @@ get_header(); ?>
                 <h2>By Me William Shakespeare A life in writing</h2>
 
                 <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Exhibition Date')) : ?>
-                    <?php dynamic_sidebar( 'Exhibition Date' ); ?>
+                    <h3><?php dynamic_sidebar( 'Exhibition Date' ); ?></h3>
 
                 <?php endif; ?>
 
