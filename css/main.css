@@ -8,7 +8,7 @@
 body {
     font-family: 'Open Sans', Arial, Verdana, 'Helvetica', 'Helvetica Neue Interface', 'Helvetica Neue', sans-serif;
     color: #000;
-    background-color: #f1edea;
+    background-color: #d3d3d3;
     padding-top: 50px;
 }
 
@@ -165,6 +165,7 @@ span.edit-button{
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
+    background-color: #f1edea;
 }
 
 .half {
@@ -546,6 +547,8 @@ span.edit-button{
     border-color: #5e5e60;
     width:100%;
     max-width: 1600px !important;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
