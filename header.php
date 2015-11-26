@@ -26,7 +26,7 @@
         <![endif]-->
 
         <!--[if lte IE 9]>
-        <link href="<?php bloginfo('template_directory'); ?>/css/ie.css" rel="stylesheet">
+        <link href="/wp-content/themes/bmws/css/ie.css" rel="stylesheet">
         <![endif]-->
 	</head>
 	<body>
