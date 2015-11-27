@@ -314,8 +314,8 @@ span.edit-button{
     background-image: url("../images/bmws-will-complete-m.jpg");
     background-repeat: no-repeat;
     background-size: cover !important;
-    height: 340px;
-    max-height: 340px;
+    height: 420px;
+    max-height: 420px;
     background-position: center;
 }
 
@@ -505,7 +505,7 @@ span.edit-button{
     width: 100%;
     max-width: 1600px;
     background-position: top right;
-    height: 250px;
+    height: 360px;
     border-radius: 0px;
     margin-bottom: 0px;
     margin-top: 0px;
