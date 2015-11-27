@@ -109,14 +109,19 @@ h3, .h3 {
 
 .black .button, .black a .button{
     border: 1px solid #000;
-    background-color: transparent;
+    background-color: #000;
     padding: 10px;
-    color: #000;
+    color: #fff;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
     font-size: 1.2em;
     white-space: nowrap;
+}
+
+.black .button:hover{
+    background-color: #5e5e60;
+    border:1px solid #5e5e60;
 }
 
 a.button, .info-box a.button, a .ticket-button {
@@ -168,7 +173,7 @@ span.edit-button{
     background-color: #f1edea;
 }
 
-.half {
+.half, .one-third, .two-thirds{
     width: 100%;
     float: left;
 }
@@ -185,6 +190,9 @@ span.edit-button{
     position: relative;
     top: 0;
     left: 0;
+}
+.positioner .button{
+    margin-top: 23%;
 }
 
 .main {
@@ -234,7 +242,7 @@ span.edit-button{
 }
 
 .padding-top-extra {
-    padding-top: 15px !important;
+    padding-top: 0px !important;
 }
 
 .padding-top-small {
@@ -289,6 +297,7 @@ span.edit-button{
     margin-right: 10px;
 }
 
+
 /* banner image styles
 ===================================*/
 
@@ -314,8 +323,8 @@ span.edit-button{
     background-image: url("../images/bmws-will-complete-m.jpg");
     background-repeat: no-repeat;
     background-size: cover !important;
-    height: 340px;
-    max-height: 340px;
+    height: 420px;
+    max-height: 420px;
     background-position: center;
 }
 
@@ -341,7 +350,7 @@ span.edit-button{
 
 .zoom-viewer{
     position: relative;
-    width:90%;
+    width:100%;
     height:auto;
     min-height: 450px;
     max-width: 1280px;
@@ -379,6 +388,7 @@ span.edit-button{
 }
 
 .zoom-controls{
+    display:none;
     width:60px;
     position: absolute;
     right: 15px;
@@ -504,7 +514,7 @@ span.edit-button{
     width: 100%;
     max-width: 1600px;
     background-position: top right;
-    height: 250px;
+    height: 360px;
     border-radius: 0px;
     margin-bottom: 0px;
     margin-top: 0px;
@@ -695,7 +705,16 @@ span.edit-button{
 /* media queries
 ===================================*/
 
+
+
+
 @media (max-width: 768px) {
+
+    .info-logos img {
+        max-height: 30px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
 
     .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
         background-color: #5e5e60;
@@ -728,6 +747,39 @@ span.edit-button{
 }
 
 @media (min-width: 768px) {
+    .padding-top-extra {
+        padding-top: 15px !important;
+    }
+    .zoom-viewer{
+        position: relative;
+        width:90%;
+        height:auto;
+        min-height: 450px;
+        max-width: 1280px;
+        overflow: hidden;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom:20px;
+        margin-top: 20px;
+        border:10px solid #000;
+    }
+
+    .zoom-controls{
+        width:60px;
+        position: absolute;
+        right: 15px;
+        top:20px;
+        background-color: rgba(0,0,0,0.8) !important;
+        padding-top:10px;
+        margin-left: auto;
+        margin-right: auto;
+        height:auto;
+        overflow: hidden;
+        z-index: 1000;
+        text-align:center;
+        border:1px solid #000;
+        display:block;
+    }
 
     .zoom-viewer {
         height: 640px;
@@ -822,13 +874,27 @@ span.edit-button{
         float: left;
     }
 
-    .positioner {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+    .one-third{
+        width: 30%;
+        float: left;
+
     }
 
+    .two-thirds{
+        width:68%;
+        float: left;
+    }
+    .positioner {
+        /*position: absolute;*/
+        /*top: 50%;*/
+        /*left: 50%;*/
+        /*transform: translate(-50%, -50%);*/
+        margin-top:20px;
+        margin-left:20px;
+    }
+    .positioner .button{
+        margin-top: 10%;
+    }
     .info {
         width: 100%;
         min-height: 50px;
@@ -854,6 +920,8 @@ span.edit-button{
         width: 48%;
     }
 
+
+
     .info {
         z-index: 5000;
         -webkit-box-shadow: 0px 1px 1px #5e5e60;
@@ -864,5 +932,22 @@ span.edit-button{
     .info-logos img {
         max-height: 60px;
     }
+    .tna-logo{
+        max-height: 40px !important;;
+    }
 
+}
+@media (min-width: 768px) and (max-width: 1024px){
+
+    .info-logos img {
+        max-height: 40px;
+        margin-top: 30px;
+        margin-bottom: 5px;
+    }
+
+}
+
+@media (min-width: 480px) and (max-width: 768px){
+.positioner .button{
+    margin-top: 15%;
 }

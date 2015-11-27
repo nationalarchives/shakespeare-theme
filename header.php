@@ -86,7 +86,7 @@
             </div>
             <div class="half info-logos">
                 <a href="http://www.nationalarchives.gov.uk" target="_blank" title="Visit The National Archives' website"><img
-                        src="<?php bloginfo('template_directory'); ?>/images/bmws-the-national-archives-logo.png" alt="The National Archives' logo"></a><a
+                        src="<?php bloginfo('template_directory'); ?>/images/bmws-the-national-archives-logo.png" alt="The National Archives' logo" class="tna-logo"></a><a
                     href="http://www.kcl.ac.uk/" target="_blank" title="Visit the King's College London website"><img
                         src="<?php bloginfo('template_directory'); ?>/images/bmws-kings-college-london.png" alt="Kings College London logo"></a>
             </div>
