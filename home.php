@@ -27,33 +27,24 @@ get_header(); ?>
 
 
     <div class="container-fluid ">
-        <div class="half grey-bg-desktop float-right">
+        <div class="one-third grey-bg float-right equalbox">
 
-            <div class="half text-left padding base equalbox" id="plus-info">
+            <div class="text-center base-bg equalbox">
+                <div class="vertical-half text-left padding-extra-big base grey-bg">
 
-                <h2>By Me William Shakespeare A life in writing</h2>
+                    <div class="positioner padding-top-extra">
 
-                <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Exhibition Date')) : ?>
-                    <h3><?php dynamic_sidebar( 'Exhibition Date' ); ?></h3>
-
-                <?php endif; ?>
-
-                <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Exhibition Address')) : ?>
-                    <?php dynamic_sidebar( 'Exhibition Address' ); ?>
-
-                <?php endif; ?>
-
-
-            </div>
-            <div class="half text-center base-bg equalbox">
-                <div class="vertical-half padding-extra-big text-center black grey-bg-mobile">
-                    <div class="positioner">
-                        <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Ticket Pricing')) : ?>
-                            <?php dynamic_sidebar( 'Ticket Pricing' ); ?>
+                        <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Exhibition Date')) : ?>
+                            <h2><?php dynamic_sidebar( 'Exhibition Date' ); ?></h2>
 
                         <?php endif; ?>
 
+                    <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Exhibition Address')) : ?>
+                        <?php dynamic_sidebar( 'Exhibition Short Address' ); ?>
+
+                    <?php endif; ?>
                     </div>
+
                 </div>
                 <div class="vertical-half padding-extra-big  text-center green-bg black">
                     <div class="positioner padding-top-extra">
@@ -63,13 +54,13 @@ get_header(); ?>
                                 <div class="clearfix-padding"></div>
                             <?php endif; ?>
 
-                        <p>Advanced booking is recommended</p>
+
                     </div>
                 </div>
             </div>
 
         </div>
-        <div class="half green-left-border padding padding-left-extra float-left equalbox">
+        <div class="two-thirds green-left-border padding padding-left-extra float-left equalbox">
             <h2><?php the_title(); ?></h2>
 
             <?php the_content(); ?>
