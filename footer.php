@@ -1,6 +1,6 @@
-<div class="container-fluid">
+<div class="container-fluid green-left-border ">
 
-    <div class="col-xs-6 green-left-border text-left padding">
+    <div class="two-thirds float-left text-left padding">
 
 
         <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Copyright')) : ?>
@@ -8,16 +8,16 @@
 
         <?php endif; ?>
 
-    </div>
-    <div class="col-xs-6 text-right padding ">
 
-        <p>
-            <a href="http://www.shakespeare400.org/" target="_blank" class="border-none"><img
-                    src="<?php bloginfo('template_directory'); ?>/images/bmws-shakespeare-400.png" title="Visit the Shakespeare400 website" border="0"
-                    class="s400"></a>
-        </p>
 
     </div>
+
+    <div class="one-third float-right padding-extra-big">
+        <a href="http://www.shakespeare400.org/" target="_blank" class="border-none"><img
+                src="<?php bloginfo('template_directory'); ?>/images/bmws-shakespeare-400.png" title="Visit the Shakespeare400 website" border="0"
+                class="s400"></a>
+    </div>
+
 
     <div class="clearfix"></div>
     <div class="col-lg-12 text-left padding border-top-dotted">
@@ -40,7 +40,6 @@
 </div>
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/js/jquery.matchHeight-min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/scripts.js"></script>
 
 

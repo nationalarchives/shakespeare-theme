@@ -1,24 +1,95 @@
-<?php get_header(); ?>
 
-	<main role="main">
-		<!-- section -->
-		<section>
 
-			<!-- article -->
-			<article id="post-404">
+<?php
 
-				<h1><?php _e( 'Page not found', 'html5blank' ); ?></h1>
-				<h2>
-					<a href="<?php echo home_url(); ?>"><?php _e( 'Return home?', 'html5blank' ); ?></a>
-				</h2>
 
-			</article>
-			<!-- /article -->
 
-		</section>
-		<!-- /section -->
-	</main>
+get_header(); ?>
 
-<?php get_sidebar(); ?>
+
+
+<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+
+
+
+    <div class="jumbotron main main-banner">
+
+        <img src="<?php bloginfo('template_directory'); ?>/images/bmws-by-me-william-shakespeare.png" title="By me William Shakespeare" class="title-img">
+
+        <?php the_title(); ?>
+
+
+    </div>
+
+    <div class="container-fluid ">
+
+        <div class="green-left-border padding-left-extra">
+            <div class="breadcrumb"><?php if (function_exists('dimox_breadcrumbs')) dimox_breadcrumbs(); ?></div>
+
+            <div class="clearfix"></div>
+
+
+            <h2><?php the_title(); ?></h2>
+            <?php edit_post_link(); ?>
+            <?php the_content(); ?>
+
+
+
+
+            <div class="clearfix"></div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <!-- social -->
+    <div class="container-fluid light-grey-bg grey-left-border">
+        <div class="half padding padding-left-extra float-left equalbox">
+
+            <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Exhibition Address')) : ?>
+                <?php dynamic_sidebar( 'Social' ); ?>
+
+            <?php endif; ?>
+        </div>
+        <div class="half text-left padding-big-pc float-left equalbox">
+
+            <span class='st_twitter_large' displayText='Tweet'></span>
+            <span class='st_facebook_large' displayText='Facebook'></span>
+            <span class='st_googleplus_large' displayText='Google +'></span>
+            <span class='st_pinterest_large' displayText='Pinterest'></span>
+            <span class='st_email_large' displayText='Email'></span>
+            <span class='st_sharethis_large' displayText='ShareThis'></span>
+
+        </div>
+
+    </div>
+
+    <!-- social -->
+
+
+
+
+
+
+<?php endwhile; ?>
+
+<?php else: ?>
+    <div class="container-fluid ">
+        <div class="half green-left-border padding padding-left-extra float-left">
+            <h2>Sorry</h2>
+
+            <p>We couldn't find that page. Return to the <a href="/">homepage</a>.</p>
+        </div>
+    </div>
+
+<?php endif; ?>
+
+
+
 
 <?php get_footer(); ?>
+

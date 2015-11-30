@@ -2,9 +2,7 @@
 
 <?php
 
-/*
- Template Name: Posts
- */
+
 
 get_header(); ?>
 
@@ -14,13 +12,14 @@ get_header(); ?>
 
 
 
-    <div class="jumbotron main will-banner">
+    <div class="jumbotron main main-banner">
 
-        <h1 class="hidden"><?php the_title(); ?></h1>
+        <img src="<?php bloginfo('template_directory'); ?>/images/bmws-by-me-william-shakespeare.png" title="By me William Shakespeare" class="title-img">
+
+        <?php the_title(); ?>
 
 
     </div>
-
 
     <div class="container-fluid ">
 
@@ -46,6 +45,30 @@ get_header(); ?>
 
 
     </div>
+
+    <!-- social -->
+    <div class="container-fluid light-grey-bg grey-left-border">
+        <div class="half padding padding-left-extra float-left equalbox">
+
+            <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Exhibition Address')) : ?>
+                <?php dynamic_sidebar( 'Social' ); ?>
+
+            <?php endif; ?>
+        </div>
+        <div class="half text-left padding-big-pc float-left equalbox">
+
+            <span class='st_twitter_large' displayText='Tweet'></span>
+            <span class='st_facebook_large' displayText='Facebook'></span>
+            <span class='st_googleplus_large' displayText='Google +'></span>
+            <span class='st_pinterest_large' displayText='Pinterest'></span>
+            <span class='st_email_large' displayText='Email'></span>
+            <span class='st_sharethis_large' displayText='ShareThis'></span>
+
+        </div>
+
+    </div>
+
+    <!-- social -->
 
 
 

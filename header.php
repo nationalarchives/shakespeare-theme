@@ -28,14 +28,27 @@
         <!--[if lte IE 9]>
         <link href="/wp-content/themes/bmws/css/ie.css" rel="stylesheet">
         <![endif]-->
+
+        <script type="text/javascript">var switchTo5x=true;</script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "e5cdd262-ef8c-4460-b5bb-6be43e502d96", doNotHash: false, doNotCopy: false, hashAddressBar: false, onhover:false});</script>
 	</head>
 	<body>
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-N69ZKL"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-N69ZKL');</script>
+    <!-- End Google Tag Manager -->
 
 
 
     <div class="wrapper">
 
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
 
                 <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Ticket URL')) : ?>
@@ -66,14 +79,14 @@
 
 
             </div>
-        </nav>
+        </div>
         <div class="container-fluid base-bg green-left-border info">
 
             <div class="half float-left padding-left-small">
-                <div class="float-left padding-top-medium">
+                <div class="float-left padding-top-large">
                     <img src="<?php bloginfo('template_directory'); ?>/images/bmws-by-me-william-shakespeare.png" title="By me William Shakespeare" class="info-img">
                 </div>
-                <div class="float-left padding-top-medium padding-left-small">
+                <div class="float-left padding-top-large padding-left-small">
                     <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Exhibition Date')) : ?>
                         <b> <?php dynamic_sidebar( 'Exhibition Date' ); ?></b>
 
