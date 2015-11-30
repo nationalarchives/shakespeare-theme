@@ -40,7 +40,6 @@
 </div>
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/js/jquery.matchHeight-min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/scripts.js"></script>
 
 
