@@ -2,9 +2,7 @@
 
 <?php
 
-/*
- Template Name: Posts
- */
+
 
 get_header(); ?>
 
@@ -14,13 +12,14 @@ get_header(); ?>
 
 
 
-    <div class="jumbotron main will-banner">
+    <div class="jumbotron main main-banner">
 
-        <h1 class="hidden"><?php the_title(); ?></h1>
+        <img src="<?php bloginfo('template_directory'); ?>/images/bmws-by-me-william-shakespeare.png" title="By me William Shakespeare" class="title-img">
+
+        <?php the_title(); ?>
 
 
     </div>
-
 
     <div class="container-fluid ">
 

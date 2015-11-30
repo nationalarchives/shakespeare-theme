@@ -249,6 +249,24 @@ register_sidebar(array(
     'after_title'   => '',
 ));
 
+register_sidebar(array(
+    'name'=> 'Social',
+    'id' => 'social_box',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '',
+    'after_title'   => '',
+));
+
+register_sidebar(array(
+    'name'=> 'Home Button',
+    'id' => 'home_button',
+    'before_widget' => '',
+    'after_widget'  => '',
+    'before_title'  => '',
+    'after_title'   => '',
+));
+
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );

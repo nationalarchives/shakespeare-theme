@@ -50,6 +50,10 @@ a:hover {
     border-left: 15px solid #00da00;
 }
 
+
+.grey-left-border {
+    border-left: 15px solid #5e5e60;
+}
 .grey {
     color: #5e5e60;
 }
@@ -218,6 +222,7 @@ span.edit-button{
     float:left !important;
     margin-right:10px;
 }
+
 /* padding and margins
 ===================================*/
 
@@ -251,6 +256,22 @@ span.edit-button{
 .padding-top-medium {
     padding-top:10px !important;
 }
+.padding-top-large {
+    padding-top:20px !important;
+}
+.padding-big-pc{
+    padding:3.2% 2% 2% 2% !important;
+}
+
+/* margins
+===================================*/
+.margin-none{
+margin:0px !important;}
+}
+.margin-small{
+    margin:2px !important;
+}
+
 /* info panel
 ===================================*/
 
@@ -746,7 +767,17 @@ span.edit-button{
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
+
+    .navbar-fixed-top {
+        position: fixed !important;
+        min-height: 50px !important;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+
+    }
+
     .padding-top-extra {
         padding-top: 15px !important;
     }
@@ -865,7 +896,7 @@ span.edit-button{
     .vertical-half {
         width: 100%;
         height: auto;
-        min-height: 230px;
+        min-height: 170px;
         position: relative;
     }
 
@@ -930,7 +961,7 @@ span.edit-button{
     }
 
     .info-logos img {
-        max-height: 60px;
+        max-height: 80px;
     }
     .tna-logo{
         max-height: 40px !important;;

@@ -30,9 +30,8 @@ get_header(); ?>
         <div class="one-third grey-bg float-right equalbox">
 
             <div class="text-center base-bg equalbox">
-                <div class="vertical-half text-left padding-extra-big base grey-bg">
-
-                    <div class="positioner padding-top-extra">
+                <div class="vertical-half text-center padding-extra-big base grey-bg">
+                    <div class="positioner">
 
                         <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Exhibition Date')) : ?>
                             <h2><?php dynamic_sidebar( 'Exhibition Date' ); ?></h2>
@@ -47,10 +46,10 @@ get_header(); ?>
 
                 </div>
                 <div class="vertical-half padding-extra-big  text-center green-bg black">
-                    <div class="positioner padding-top-extra">
+                    <div class="positioner">
 
                             <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Ticket URL')) : ?>
-                                <?php dynamic_sidebar( 'Ticket URL' ); ?>
+                                <?php dynamic_sidebar( 'Home Button' ); ?>
                                 <div class="clearfix-padding"></div>
                             <?php endif; ?>
 
@@ -72,6 +71,30 @@ get_header(); ?>
     </div>
 
     <!-- /.container -->
+
+    <!-- social -->
+<div class="container-fluid light-grey-bg grey-left-border">
+    <div class="half padding padding-left-extra float-left equalbox">
+
+        <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Exhibition Address')) : ?>
+        <?php dynamic_sidebar( 'Social' ); ?>
+
+        <?php endif; ?>
+        </div>
+    <div class="half text-left padding-big-pc float-left equalbox">
+
+        <span class='st_twitter_large' displayText='Tweet'></span>
+        <span class='st_facebook_large' displayText='Facebook'></span>
+        <span class='st_googleplus_large' displayText='Google +'></span>
+        <span class='st_pinterest_large' displayText='Pinterest'></span>
+        <span class='st_email_large' displayText='Email'></span>
+        <span class='st_sharethis_large' displayText='ShareThis'></span>
+
+        </div>
+
+    </div>
+
+    <!-- social -->
 
 
     <div class="jumbotron will-banner">

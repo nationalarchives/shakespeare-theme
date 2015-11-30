@@ -1,15 +1,12 @@
 <div class="container-fluid">
 
-    <div class="col-xs-6 green-left-border text-left padding">
+    <div class="col-lg-12 green-left-border text-left padding">
 
 
         <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Copyright')) : ?>
             <?php dynamic_sidebar( 'Copyright' ); ?>
 
         <?php endif; ?>
-
-    </div>
-    <div class="col-xs-6 text-right padding ">
 
         <p>
             <a href="http://www.shakespeare400.org/" target="_blank" class="border-none"><img
@@ -18,6 +15,7 @@
         </p>
 
     </div>
+
 
     <div class="clearfix"></div>
     <div class="col-lg-12 text-left padding border-top-dotted">
