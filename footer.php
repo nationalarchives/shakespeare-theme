@@ -1,6 +1,6 @@
-<div class="container-fluid">
+<div class="container-fluid green-left-border ">
 
-    <div class="col-lg-12 green-left-border text-left padding">
+    <div class="two-thirds float-left text-left padding">
 
 
         <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Copyright')) : ?>
@@ -8,12 +8,14 @@
 
         <?php endif; ?>
 
-        <p>
-            <a href="http://www.shakespeare400.org/" target="_blank" class="border-none"><img
-                    src="<?php bloginfo('template_directory'); ?>/images/bmws-shakespeare-400.png" title="Visit the Shakespeare400 website" border="0"
-                    class="s400"></a>
-        </p>
 
+
+    </div>
+
+    <div class="one-third float-right padding-extra-big">
+        <a href="http://www.shakespeare400.org/" target="_blank" class="border-none"><img
+                src="<?php bloginfo('template_directory'); ?>/images/bmws-shakespeare-400.png" title="Visit the Shakespeare400 website" border="0"
+                class="s400"></a>
     </div>
 
 
