@@ -8,7 +8,7 @@
 body {
     font-family: 'Open Sans', Arial, Verdana, 'Helvetica', 'Helvetica Neue Interface', 'Helvetica Neue', sans-serif;
     color: #000;
-    background-color: #d3d3d3;
+    background-color: #e1e1e1;
     padding-top: 50px;
 }
 
@@ -186,7 +186,7 @@ span.edit-button{
     width: 50%;
     float: left;
     height: auto;
-    min-height: 160px;
+    min-height: 210px;
     position: relative;
 }
 
@@ -196,7 +196,7 @@ span.edit-button{
     left: 0;
 }
 .positioner .button{
-    margin-top: 23%;
+    margin-top: 37%;
 }
 
 .main {
@@ -730,6 +730,9 @@ margin:0px !important;}
 
 
 @media (max-width: 768px) {
+    .half, .info .half {
+        width:100%;
+    }
     .tna-logo{
         max-height: 30px !important;;
     }
@@ -899,7 +902,7 @@ margin:0px !important;}
     .vertical-half {
         width: 100%;
         height: auto;
-        min-height: 170px;
+        min-height: 210px;
         position: relative;
     }
 
@@ -958,9 +961,9 @@ margin:0px !important;}
 
     .info {
         z-index: 5000;
-        -webkit-box-shadow: 0px 1px 1px #5e5e60;
-        -moz-box-shadow: 0px 1px 1px #5e5e60;
-        box-shadow: 0px 1px 1px #5e5e60;
+        -webkit-box-shadow: 0px 1px 0px #5e5e60;
+        -moz-box-shadow: 0px 1px 0px #5e5e60;
+        box-shadow: 0px 1px 0px #5e5e60;
     }
 
     .info-logos img {
