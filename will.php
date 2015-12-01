@@ -67,13 +67,13 @@ get_header(); ?>
 
                 <div class="zoom-controls">
                     <div mag-ctrl="controls">
-                        <button mag-ctrl-zoom-by="0.5" title="Zoom in"><i class="fa fa-plus fa-2x"></i></button>
-                        <button mag-ctrl-zoom-by="-0.5" title="Zoom out"><i class="fa fa-minus fa-2x"></i></button>
-                        <button mag-ctrl-move-by-y="-0.1" title="Move up"><i class="fa fa-caret-up fa-2x"></i></button>
-                        <button mag-ctrl-move-by-y="0.1" title="Move down"><i class="fa fa-caret-down fa-2x"></i></button>
-                        <button mag-ctrl-move-by-x="-0.1" title="Move left"><i class="fa fa-caret-left fa-2x"></i></button>
-                        <button mag-ctrl-move-by-x="0.1" title="Move right"><i class="fa fa-caret-right fa-2x"></i></button>
-                        <button mag-ctrl-fullscreen title="View fullscreen"><i class="fa fa-expand fa-2x"></i></button>
+                        <button mag-ctrl-zoom-by="0.5" title="Zoom in" id="zoom-in"><i class="fa fa-plus fa-2x"></i></button>
+                        <button mag-ctrl-zoom-by="-0.5" title="Zoom out" id="zoom-out"><i class="fa fa-minus fa-2x"></i></button>
+                        <button mag-ctrl-move-by-y="-0.1" title="Move up" id="move-up"><i class="fa fa-caret-up fa-2x"></i></button>
+                        <button mag-ctrl-move-by-y="0.1" title="Move down" id="move-down"><i class="fa fa-caret-down fa-2x"></i></button>
+                        <button mag-ctrl-move-by-x="-0.1" title="Move left" id="move-left"><i class="fa fa-caret-left fa-2x"></i></button>
+                        <button mag-ctrl-move-by-x="0.1" title="Move right" id="move-right"><i class="fa fa-caret-right fa-2x"></i></button>
+                        <button mag-ctrl-fullscreen title="View fullscreen" id="fullscreen"><i class="fa fa-expand fa-2x"></i></button>
 
 
                     </div></div>

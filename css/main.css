@@ -8,7 +8,7 @@
 body {
     font-family: 'Open Sans', Arial, Verdana, 'Helvetica', 'Helvetica Neue Interface', 'Helvetica Neue', sans-serif;
     color: #000;
-    background-color: #d3d3d3;
+    background-color: #e1e1e1;
     padding-top: 50px;
 }
 
@@ -186,7 +186,7 @@ span.edit-button{
     width: 50%;
     float: left;
     height: auto;
-    min-height: 160px;
+    min-height: 210px;
     position: relative;
 }
 
@@ -196,7 +196,7 @@ span.edit-button{
     left: 0;
 }
 .positioner .button{
-    margin-top: 23%;
+    margin-top: 37%;
 }
 
 .main {
@@ -279,17 +279,16 @@ margin:0px !important;}
     width: 100%;
     min-height: 50px;
     position: relative;
-    display: inline-block;
-    padding-top: 5px;
+    padding-top: 0px;
 }
 
 .info .half {
     width: 48%;
 }
 
-.info .half:first-of-type {
-    width: 100%;
-}
+/*.info .half:first-of-type {*/
+    /*width: 100%;*/
+/*}*/
 
 .info-img {
     width: 100%;
@@ -727,14 +726,22 @@ margin:0px !important;}
 ===================================*/
 
 
-
+@media (max-width: 480px) {
+    .info-logos {
+        width: 100% !important;
+        text-align: center;
+    }
+}
 
 @media (max-width: 768px) {
+    .half, .info .half {
+        width: 100%;
+    }
     .tna-logo{
-        max-height: 30px !important;;
+        max-height: 27px !important;;
     }
     .info-logos img {
-        max-height: 50px;
+        max-height: 60px;
         margin-top: 5px;
         margin-bottom: 5px;
     }
@@ -828,6 +835,7 @@ margin:0px !important;}
         border-radius: 0px;
         margin-bottom: 0px;
         position: relative;
+        margin-top:0px !important;
     }
 
     .jumbotron .info-box {
@@ -854,8 +862,8 @@ margin:0px !important;}
     .main-banner {
         background-image: url("../images/bmws-will-signature.jpg");
         background-size: cover !important;
-        height: 340px;
-        max-height: 340px;
+        height:420px;
+        max-height: 420px;
         background-position: right;
     }
 
@@ -899,7 +907,7 @@ margin:0px !important;}
     .vertical-half {
         width: 100%;
         height: auto;
-        min-height: 170px;
+        min-height: 210px;
         position: relative;
     }
 
@@ -938,10 +946,10 @@ margin:0px !important;}
 
     .title-img {
         width: 80%;
-        max-width: 968px;
+        max-width:659px;
         margin-left: 0px;
         display: block;
-        padding-top:70px;
+        padding-top:110px;
     }
 
     .info-logos {
@@ -958,9 +966,9 @@ margin:0px !important;}
 
     .info {
         z-index: 5000;
-        -webkit-box-shadow: 0px 1px 1px #5e5e60;
-        -moz-box-shadow: 0px 1px 1px #5e5e60;
-        box-shadow: 0px 1px 1px #5e5e60;
+        -webkit-box-shadow: 0px 1px 0px #5e5e60;
+        -moz-box-shadow: 0px 1px 0px #5e5e60;
+        box-shadow: 0px 1px 0px #5e5e60;
     }
 
     .info-logos img {
@@ -973,7 +981,22 @@ margin:0px !important;}
 }
 
 
-@media (min-width: 480px) and (max-width: 768px){
-.positioner .button{
-    margin-top: 15%;
+@media (min-width: 480px) and (max-width: 768px) {
+    .positioner .button {
+        margin-top: 15%;
+    }
+    .half, .info .half {
+        width: 100%;
+    }
+    .half .half{
+        width: 49%;
+
+    }
+    .info-logos {
+width:100% !important;
+        text-align: center;
+    }
 }
+
+
+

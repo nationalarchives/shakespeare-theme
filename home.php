@@ -7,18 +7,9 @@
  */
 
 get_header(); ?>
-
-
-
-
-
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
-
-
-    <div class="jumbotron main main-banner">
-
-        <img src="<?php bloginfo('template_directory'); ?>/images/bmws-by-me-william-shakespeare.png" title="By me William Shakespeare" class="title-img">
+<div class="jumbotron main main-banner">
+<img src="<?php bloginfo('template_directory'); ?>/images/bmws-by-me-william-shakespeare.png" title="By me William Shakespeare" class="title-img">
 
         <h1 class="hidden">By Me William Shakespeare</h1>
 
@@ -27,19 +18,17 @@ get_header(); ?>
 
 
     <div class="container-fluid ">
-        <div class="one-third grey-bg float-right equalbox">
+        <div class="one-third float-right equalbox">
 
             <div class="text-center base-bg equalbox">
                 <div class="vertical-half text-center padding-extra-big base grey-bg">
                     <div class="positioner">
 
-                        <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Exhibition Date')) : ?>
-                            <h2><?php dynamic_sidebar( 'Exhibition Date' ); ?></h2>
 
-                        <?php endif; ?>
+
 
                     <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Exhibition Address')) : ?>
-                        <?php dynamic_sidebar( 'Exhibition Short Address' ); ?>
+                        <?php dynamic_sidebar( 'Exhibition Address' ); ?>
 
                     <?php endif; ?>
                     </div>

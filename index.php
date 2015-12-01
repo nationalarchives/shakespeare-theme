@@ -16,7 +16,7 @@ get_header(); ?>
 
         <img src="<?php bloginfo('template_directory'); ?>/images/bmws-by-me-william-shakespeare.png" title="By me William Shakespeare" class="title-img">
 
-        <?php the_title(); ?>
+        <h1 class="hidden"> <?php the_title(); ?></h1>
 
 
     </div>
@@ -30,11 +30,11 @@ get_header(); ?>
 
 
             <h2><?php the_title(); ?></h2>
-            <?php edit_post_link(); ?>
+
             <?php the_content(); ?>
 
 
-
+            <?php edit_post_link('Edit this page','<span class="edit-button">','</span>'); ?>
 
             <div class="clearfix"></div>
         </div>
