@@ -83,7 +83,7 @@
         <div class="container-fluid base-bg green-left-border info">
 
             <div class="half float-left padding-left-small">
-                <div class="half float-left padding-top-large">
+                <div class="half float-left padding-top-small">
                     <img src="<?php bloginfo('template_directory'); ?>/images/bmws-by-me-william-shakespeare.png" title="By me William Shakespeare" class="info-img">
                 </div>
                 <div class="half float-left padding-top-large padding-left-small">
@@ -104,5 +104,6 @@
                     href="http://www.kcl.ac.uk/" target="_blank" title="Visit the King's College London website"><img
                         src="<?php bloginfo('template_directory'); ?>/images/bmws-kings-college-london.png" alt="Kings College London logo"></a>
             </div>
+            <div class="clearfix"></div>
         </div>
 

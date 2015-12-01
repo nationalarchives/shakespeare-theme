@@ -7,18 +7,9 @@
  */
 
 get_header(); ?>
-
-
-
-
-
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
-
-
-    <div class="jumbotron main main-banner">
-
-        <img src="<?php bloginfo('template_directory'); ?>/images/bmws-by-me-william-shakespeare.png" title="By me William Shakespeare" class="title-img">
+<div class="jumbotron main main-banner">
+<img src="<?php bloginfo('template_directory'); ?>/images/bmws-by-me-william-shakespeare.png" title="By me William Shakespeare" class="title-img">
 
         <h1 class="hidden">By Me William Shakespeare</h1>
 
