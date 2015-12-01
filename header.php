@@ -84,7 +84,7 @@
 
             <div class="half float-left padding-left-small">
                 <div class="half float-left padding-top-small">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/bmws-by-me-william-shakespeare.png" title="By me William Shakespeare" class="info-img">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/bmws-by-me-william-shakespeare-sm.jpg" title="By me William Shakespeare" class="info-img">
                 </div>
                 <div class="half float-left padding-top-large padding-left-small">
                     <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Exhibition Date')) : ?>

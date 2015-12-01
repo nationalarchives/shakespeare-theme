@@ -47,12 +47,12 @@ a:hover {
 }
 
 .green-left-border {
-    border-left: 15px solid #00da00;
+    border-left: 25px solid #00da00;
 }
 
 
 .grey-left-border {
-    border-left: 15px solid #5e5e60;
+    border-left: 25px solid #5e5e60;
 }
 .grey {
     color: #5e5e60;
@@ -66,8 +66,8 @@ a:hover {
     background-color: transparent;
 }
 
-.grey-bg-mobile {
-    background-color: #5e5e60;
+.action-bg-mobile {
+    background-color: #d3d3d3;
     color: #f1edea !important;
 }
 
@@ -200,7 +200,7 @@ span.edit-button{
 }
 
 .main {
-    padding: 60px 15px 0px 15px !important;
+    padding: 60px 15px 0px 25px !important;
     text-align: left;
 }
 
@@ -280,10 +280,12 @@ margin:0px !important;}
     min-height: 50px;
     position: relative;
     padding-top: 0px;
+
 }
 
 .info .half {
     width: 48%;
+
 }
 
 /*.info .half:first-of-type {*/
@@ -343,8 +345,8 @@ margin:0px !important;}
     background-image: url("../images/bmws-will-complete-m.jpg");
     background-repeat: no-repeat;
     background-size: cover !important;
-    height: 420px;
-    max-height: 420px;
+    height: 340px;
+    max-height: 340px;
     background-position: center;
 }
 
@@ -724,12 +726,24 @@ margin:0px !important;}
 
 /* media queries
 ===================================*/
+@media (min-width: 480px) {
 
-
+    .action-bg-mobile {
+        background-color: #00da00;
+        color: #000 !important;
+    }
+}
 @media (max-width: 480px) {
     .info-logos {
         width: 100% !important;
         text-align: center;
+    }
+    .vertical-half{
+        width:100%;
+        min-height: 90px;
+    }
+    .positioner .button {
+        margin-top:5%;
     }
 }
 
@@ -870,16 +884,16 @@ margin:0px !important;}
     .document-banner {
         background-image: url("../images/bmws-revels.jpg");
         background-size: cover !important;
-        height: 340px;
-        max-height: 340px;
+        height: 420px;
+        max-height: 420px;
         background-position: center;
     }
 
     .will-banner {
         background-image: url("../images/bmws-will-complete.jpg");
         background-size: cover !important;
-        height: 340px;
-        max-height: 340px;
+        height: 420px;
+        max-height: 420px;
         background-position: bottom right;
     }
 
@@ -887,10 +901,7 @@ margin:0px !important;}
         background-color: #5e5e60;
     }
 
-    .grey-bg-mobile {
-        background-color: transparent;
-        color: #000 !important;
-    }
+
 
     .grey-bg-mobile a {
         color: #000;
@@ -912,8 +923,9 @@ margin:0px !important;}
     }
 
     .half {
-        width: 50%;
+        width: 49% !important;
         float: left;
+
     }
 
     .one-third{
@@ -950,6 +962,9 @@ margin:0px !important;}
         margin-left: 0px;
         display: block;
         padding-top:110px;
+        box-shadow:none;
+        -moz-box-shadow: none;
+        border:0px !important;
     }
 
     .info-logos {
@@ -998,5 +1013,29 @@ width:100% !important;
     }
 }
 
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+    .info-logos{
+        width: 49% !important;
+
+    }
+.info{
+    position: relative;
+    display: block;
+}
+    .navbar-fixed-top {
+        position: relative !important;
+        min-height: 50px !important;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+}
 
 
