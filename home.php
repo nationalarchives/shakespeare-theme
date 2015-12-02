@@ -17,10 +17,10 @@ get_header(); ?>
     </div>
 
 
-    <div class="container-fluid ">
-        <div class="one-third float-right equalbox">
+    <div class="container-fluid green-left-border">
+        <div class="one-third float-right">
 
-            <div class="text-center base-bg equalbox">
+            <div class="text-center base-bg">
                 <div class="vertical-half text-center padding-extra-big base grey-bg">
                     <div class="positioner">
 
@@ -34,7 +34,7 @@ get_header(); ?>
                     </div>
 
                 </div>
-                <div class="vertical-half padding-extra-big  text-center green-bg black">
+                <div class="vertical-half padding-extra-big text-center green-bg action-bg-mobile black">
                     <div class="positioner">
 
                             <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Ticket URL')) : ?>
@@ -46,9 +46,9 @@ get_header(); ?>
                     </div>
                 </div>
             </div>
-
+<div class="clearfix"></div>
         </div>
-        <div class="two-thirds green-left-border padding padding-left-extra float-left equalbox">
+        <div class="two-thirds padding padding-left-extra float-left">
             <h2><?php the_title(); ?></h2>
 
             <?php the_content(); ?>

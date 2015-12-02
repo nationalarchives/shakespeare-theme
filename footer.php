@@ -1,3 +1,5 @@
+<?php if (!is_page_template("holding.php")){?>
+
 <div class="container-fluid green-left-border ">
 
     <div class="two-thirds float-left text-left padding">
@@ -92,6 +94,8 @@ if (is_page_template("will.php") or is_page_template("document-zoom.php")){
 
     })();
 </script>
+
+<?php }?>
 
 <?php }?>
 

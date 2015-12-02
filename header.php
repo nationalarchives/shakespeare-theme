@@ -2,7 +2,10 @@
 <html lang="en">
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
-		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
+		<title>
+            <?php wp_title('|',true,'right'); ?>
+            <?php bloginfo('name'); ?>
+        </title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
@@ -48,6 +51,8 @@
 
     <div class="wrapper">
 
+        <?php if (!is_page_template("holding.php")){?>
+
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
 
@@ -84,7 +89,7 @@
 
             <div class="half float-left padding-left-small">
                 <div class="half float-left padding-top-small">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/bmws-by-me-william-shakespeare.png" title="By me William Shakespeare" class="info-img">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/bmws-by-me-william-shakespeare-sm.jpg" title="By me William Shakespeare" class="info-img">
                 </div>
                 <div class="half float-left padding-top-large padding-left-small">
                     <?php if (function_exists('dynamic_sidebar') || dynamic_sidebar('Exhibition Date')) : ?>
@@ -107,3 +112,4 @@
             <div class="clearfix"></div>
         </div>
 
+<?php }?>
