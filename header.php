@@ -29,7 +29,7 @@
         <![endif]-->
 
         <!--[if lte IE 9]>
-        <link href="/wp-content/themes/bmws/css/ie.css" rel="stylesheet">
+        <link href="/wp-content/themes/shakespeare/css/ie.css" rel="stylesheet">
         <![endif]-->
 
         <script type="text/javascript">var switchTo5x=true;</script>
