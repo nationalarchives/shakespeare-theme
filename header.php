@@ -76,8 +76,11 @@
                     <ul class="nav navbar-nav">
                         <li <?php if (is_front_page()){?>class="active"<?php }?>><a href="/">About the exhibition</a></li>
                         <li <?php if (is_page_template("will.php")){?>class="active"<?php }?>><a href="/shakespeares-will/">Shakespeare's will</a></li>
-<!--                        <li><a href="/a-life-in-writing/">A life in writing</a></li>-->
 
+
+
+
+                        <li <?php if (is_page_template("documents.php") or is_page_template("document-viewer.php")){?>class="active"<?php }?>><a href="/a-life-in-writing/">A life in writing</a></li>
                     </ul>
 
                 </div>

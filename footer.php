@@ -51,7 +51,7 @@
 
 <?php
 
-if (is_page_template("will.php") or is_page_template("document-zoom.php")){
+if (is_page_template("will.php") or is_page_template("document-viewer.php")){
 
 ?>
 
