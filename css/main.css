@@ -682,7 +682,9 @@ margin:0px !important;}
 
 /* sundry styles
 ===================================*/
-
+.separator{
+    border-top:1px solid #c9c9c9;
+}
 .textwidget{
     display:inline;
 }
