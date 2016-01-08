@@ -54,42 +54,62 @@ get_header(); ?>
     <div class="clearfix"></div>
 <!-- documents go here -->
 <div class="container-fluid dark-grey-bg">
-  <?php
-    $pages = get_pages('sort_column=menu_order&child_of='.$post->ID.'&parent='.$post->ID.'');
 
-    foreach($pages as $page)
+    <?php
+    $cats = get_categories('sort_column=menu_order&exclude=1');
+    // loop through the categries
+    foreach ($cats as $cat)
     {
-        $title = $page->post_title;
+
+    // Get the cateogory ID
+    $cat_id= $cat->term_id;
+    //Header for the cateogry
+?>
+        <div class=" padding-left-extra-big">
+           <?php echo "<h2>".$cat->name."</h2>"; ?>
+            </div>
+            <div class="clearfix"></div>
+      <?php
+
+    query_posts("cat=$cat_id&post_per_page=12");
+
+    if (have_posts()) : while (have_posts()) : the_post();
+
         $thumb_id = get_post_thumbnail_id($page->ID);
         $thumb_url = wp_get_attachment_image_src($thumb_id,'large', false);
+    ?>
+
+        <div class="float-left half padding-left-extra-big">
 
 
-        ?>
+            <h3> <a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a></h3>
 
-    <div class="float-left half padding-left-extra-big">
-        <h2> <a href="<?php echo get_page_link($page->ID); ?>" title="<?php echo ($title);?>"><?php echo ($title);?></a></h2>
+            <p class="padding-top-medium padding-bottom-medium"><?php if ( empty( $post->post_excerpt ) ) {
+                    echo first_sentence($post->post_content);
+                } else {
+                    echo $post->post_excerpt;
+                }?>
 
-        <p class="padding-top-medium padding-bottom-medium"><?php if ( empty( $page->post_excerpt ) ) {
-        echo first_sentence($page->post_content);
-    } else {
-        echo $page->post_excerpt;
-    }
+                </p>
+
+            <p><a href="<?php the_permalink(); ?>" title="<?php the_title();?>" class="button">Explore this document</a></p>
+
+        </div>
+        <div class="float-left half text-center padding">
+            <a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><div style="background-image: url('<?php echo($thumb_url[0]); ?>');" class="theme"></div></a>
+        </div>
+
+        <div class="clearfix"></div>
+        <?php
 
 
-        ?></p>
 
-        <p><a href="<?php echo get_page_link($page->ID); ?>" title="<?php echo ($title);?>" class="button">Explore this document</a></p>
-
-    </div>
-    <div class="float-left half text-center padding">
-       <a href="<?php echo get_page_link($page->ID); ?>" title="<?php echo ($title);?>"><div style="background-image: url('<?php echo($thumb_url[0]); ?>');" class="theme"></div></a>
-    </div>
-
-    <div class="clearfix-padding-extra"></div>
-   <?php
+    endwhile;
+    endif;
     }
 
     ?>
+
 
     <!-- documents go here -->
 

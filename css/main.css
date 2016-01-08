@@ -107,6 +107,9 @@ h2, .h2 {
 h3, .h3 {
     font-size: 1.4em;
 }
+.dark-grey-bg h3 {
+line-height: 1.4em !important;
+}
 .dark-grey-bg h2, .dark-grey-bg p{
     color: #fff;
 }
