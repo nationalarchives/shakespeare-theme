@@ -51,7 +51,7 @@
 
 <?php
 
-if (is_page_template("will.php") or is_page_template("document-zoom.php")){
+if (is_page_template("will.php") or is_page_template("document-viewer.php")){
 
 ?>
 
@@ -74,18 +74,34 @@ if (is_page_template("will.php") or is_page_template("document-zoom.php")){
     (function () {
         var $host;
         var $controls;
+        var w = $(window).width();
 
         $host = $('[mag-thumb="controls"]');
-        $host.mag({
-            mode:'inner',
-            initialShow: 'thumb',
-            toggle: false,
-            position: 'drag',
-            positionEvent: 'move',
-            zoomMax: 4,
-            smooth: 'true'
 
-        });
+        if (w <= 768) {
+            $host.mag({
+                mode: 'inner',
+                initialShow: 'thumb',
+                toggle: false,
+                position: 'drag',
+                positionEvent: 'move',
+                zoomMax: 8,
+                smooth: 'true'
+
+            });
+        }else{
+            $host.mag({
+                mode: 'inner',
+                initialShow: 'thumb',
+                toggle: false,
+                position: 'drag',
+                positionEvent: 'move',
+                zoomMax: 4,
+                smooth: 'true'
+
+            });
+
+        }
 
         $controls = $('[mag-ctrl="controls"]');
         $controls.magCtrl({
