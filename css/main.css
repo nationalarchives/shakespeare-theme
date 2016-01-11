@@ -107,7 +107,20 @@ h2, .h2 {
 h3, .h3 {
     font-size: 1.4em;
 }
-
+.dark-grey-bg h3 {
+line-height: 1.4em !important;
+}
+.dark-grey-bg h2, .dark-grey-bg p{
+    color: #fff;
+}
+.dark-grey-bg a {
+    color: #fff;
+    border-bottom: 1px dotted #fff;
+}
+.dark-grey-bg a:hover {
+    color: #fff;
+    border-bottom: none;
+}
 /* button styles
 ===================================*/
 
@@ -233,6 +246,9 @@ span.edit-button{
 .padding-left-extra {
     padding-left: 15px !important;
 }
+.padding-left-extra-big {
+    padding-left: 40px !important;
+}
 
 .padding-left-small {
     padding-left: 5px !important;
@@ -261,6 +277,9 @@ span.edit-button{
 }
 .padding-big-pc{
     padding:3.2% 2% 2% 2% !important;
+}
+.padding-bottom-medium {
+    padding-bottom:10px !important;
 }
 
 /* margins
@@ -333,12 +352,11 @@ margin:0px !important;}
 }
 
 .document-banner {
-    background-image: url("../images/bmws-revels.jpg");
     background-repeat: no-repeat;
     background-size: cover !important;
-    height: 340px;
-    max-height: 340px;
-    background-position: center;
+    height: 255px;
+    max-height: 255px;
+    background-position: center !important;
 }
 
 .will-banner {
@@ -639,7 +657,7 @@ margin:0px !important;}
 .theme{
 
     width:95%;
-    max-width: 400px;
+    max-width: 460px;
     height:300px;
     min-height: 200px;
     position: relative;
@@ -648,24 +666,28 @@ margin:0px !important;}
     background-repeat: no-repeat;
     margin-right: auto;
     margin-left: auto;
+    text-align: center;
 
 }
 .theme .caption{
     width:100%;
-    text-align: left;
+    text-align: left !important;
     display: inline-block;
     padding: 5px;
     position: absolute;
     bottom: 0px;
     left:0px;
-    background-color: #f1edea;
     max-width: 400px;
+    background-color: #404040;
+    color:#fff;
 }
 
 
 /* sundry styles
 ===================================*/
-
+.separator{
+    border-top:1px solid #c9c9c9;
+}
 .textwidget{
     display:inline;
 }
@@ -722,6 +744,10 @@ margin:0px !important;}
 .clearfix-padding{
     clear: both;
     padding-top: 10px;
+}
+.clearfix-padding-extra{
+    clear: both;
+    padding-top: 20px;
 }
 
 /* media queries
@@ -882,11 +908,10 @@ margin:0px !important;}
     }
 
     .document-banner {
-        background-image: url("../images/bmws-revels.jpg");
         background-size: cover !important;
         height: 420px;
         max-height: 420px;
-        background-position: center;
+        background-position: center !important;
     }
 
     .will-banner {
