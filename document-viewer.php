@@ -119,7 +119,7 @@ get_header(); ?>
             <!-- Custom field here -->
             <div class="clearfix-padding"></div>
 
-            <a href="<?php echo($image_high[0]); ?>" target="_blank" class="button">View full image</a>
+            <a href="<?php echo($image_high); ?>" target="_blank" class="button">View full image</a>
 
 
             <div class="clearfix-padding"></div>
