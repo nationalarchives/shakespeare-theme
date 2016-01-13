@@ -14,12 +14,13 @@ get_header(); ?>
 
     $featured_image_id = get_post_thumbnail_id($page->ID);
     $featured_image = wp_get_attachment_image_src($featured_image_id,'full', false);
+    $featured_image = fix_internal_url($featured_image[0]);
 
     ?>
 
 
 
-    <div style="background-image: url(<?php echo($featured_image[0]); ?>);" class="jumbotron main document-banner">
+    <div style="background-image: url(<?php echo($featured_image); ?>);" class="jumbotron main document-banner">
 
         <h1 class="hidden"><?php the_title(); ?></h1>
 
@@ -77,6 +78,8 @@ get_header(); ?>
 
         $thumb_id = get_post_thumbnail_id($page->ID);
         $thumb_url = wp_get_attachment_image_src($thumb_id,'large', false);
+
+        $thumb_url = fix_internal_url( $thumb_url[0]);
     ?>
 
         <div class="float-left half padding-left-extra-big">
@@ -96,7 +99,7 @@ get_header(); ?>
 
         </div>
         <div class="float-left half text-center padding">
-            <a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><div style="background-image: url('<?php echo($thumb_url[0]); ?>');" class="theme"></div></a>
+            <a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><div style="background-image: url('<?php echo($thumb_url); ?>');" class="theme"></div></a>
         </div>
 
         <div class="clearfix"></div>

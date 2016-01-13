@@ -17,6 +17,8 @@ get_header(); ?>
         $image_id = get_post_thumbnail_id($page->ID);
         $image_high = wp_get_attachment_image_src($image_id, 'full', false);
         $image_med = wp_get_attachment_image_src($image_id, 'thumbnail', false);
+        $image_med = fix_internal_url($image_med[0]);
+        $image_high = fix_internal_url($image_high[0]);
 
     }
 
@@ -24,7 +26,7 @@ get_header(); ?>
 
 
 
-    <div  style="background-image: url(<?php echo($image_high[0]); ?>);" class="jumbotron main document-banner">
+    <div  style="background-image: url(<?php echo($image_high); ?>);" class="jumbotron main document-banner">
 
         <h1 class="hidden"><?php the_title(); ?></h1>
 
@@ -94,11 +96,11 @@ get_header(); ?>
                     </div></div>
 
                 <div mag-thumb="controls">
-                   <img src="<?php echo($image_med[0]); ?>" class="zoom-thumb"/>
+                   <img src="<?php echo($image_med); ?>" class="zoom-thumb"/>
 
                 </div>
                 <div mag-zoom="controls">
-                    <img src="<?php echo($image_high[0]); ?>" />
+                    <img src="<?php echo($image_high); ?>" />
                 </div>
 
 
@@ -117,7 +119,7 @@ get_header(); ?>
             <!-- Custom field here -->
             <div class="clearfix-padding"></div>
 
-            <a href="<?php echo($image_high[0]); ?>" target="_blank" class="button">View full image</a>
+            <a href="<?php echo($image_high); ?>" target="_blank" class="button">View full image</a>
 
 
             <div class="clearfix-padding"></div>
