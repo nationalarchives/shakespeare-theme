@@ -7,9 +7,20 @@
  */
 
 get_header(); ?>
-<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-<div class="jumbotron main main-banner">
-<img src="<?php bloginfo('template_directory'); ?>/images/bmws-by-me-william-shakespeare.png" title="By me William Shakespeare" class="title-img">
+<?php if (have_posts()): while (have_posts()) : the_post();
+
+
+    if ( has_post_thumbnail()) {
+
+        $image_id = get_post_thumbnail_id($page->ID);
+        $image_high = wp_get_attachment_image_src($image_id, 'full', false);
+        $image_high = fix_internal_url($image_high[0]);
+
+    }
+
+    ?>
+<div style="background: url(<?php echo($image_high); ?>);" class="jumbotron main main-banner" >
+
 
         <h1 class="hidden">By Me William Shakespeare</h1>
 

@@ -51,7 +51,49 @@
 
 <?php
 
-if (is_page_template("will.php") or is_page_template("document-viewer.php")){
+if (is_page_template("will.php")){?>
+
+  <script src="<?php bloginfo('template_directory'); ?>/js/jquery.bxslider.min.js"></script>
+   <link href="<?php bloginfo('template_directory'); ?>/css/jquery.bxslider.css" rel="stylesheet">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+
+
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+
+            var dslider=  $('.bxslider').bxSlider({
+                minSlides: 1,
+                maxSlides: 4,
+                slideWidth: 200,
+                slideMargin: 10, pager: true,
+                responsive:true,
+                preloadImages:'visible',
+                controls:true,
+                infiniteLoop:false,
+                hideControlOnEnd:true,
+                nextSelector: '#slider-next',
+                prevSelector: '#slider-prev',
+                nextText: '<i class="fa fa-chevron-right fa-4x"></i>',
+                prevText: '<i class="fa fa-chevron-left fa-4x"></i>'
+            });
+
+        });
+
+
+
+
+    </script>
+
+
+
+
+
+
+<?php }
+
+
+if (is_page_template("document-viewer.php")){
 
 ?>
 
