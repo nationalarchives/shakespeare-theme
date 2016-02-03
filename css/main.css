@@ -549,7 +549,6 @@ padding:2px;
 }
 #slider-prev{
     left:-25px;
-
 }
 .bxslider{
     width:635px;
@@ -841,6 +840,7 @@ padding:2px;
 
 /* media queries
 ===================================*/
+
 @media (min-width: 480px) {
     .bx-viewport{
         width:100%;
@@ -850,10 +850,7 @@ padding:2px;
         background-color: #00da00;
         color: #000 !important;
     }
-    #slider-next,  #slider-prev{
-
-        display:none;
-    }
+   
 }
 @media (max-width: 480px) {
     .info-logos {
