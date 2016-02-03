@@ -68,6 +68,7 @@
 	font-weight: bold;
 	color: #666;
 	padding-top: 20px;
+    display: block;
 }
 
 .bx-wrapper .bx-pager .bx-pager-item,
@@ -88,11 +89,13 @@
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
+    border:none;
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active {
-	background: #000;
+	background: #fff;
+    border:none;
 }
 
 /* DIRECTION CONTROLS (NEXT / PREV) */
@@ -195,4 +198,11 @@
 	display: block;
 	font-size: .85em;
 	padding: 10px;
+}
+
+@media (min-width: 480px) {
+
+.bx-pager{
+   display:none !important;
+}
 }

@@ -72,10 +72,11 @@ if (is_page_template("will.php")){?>
                 controls:true,
                 infiniteLoop:false,
                 hideControlOnEnd:true,
+                pager:true,
                 nextSelector: '#slider-next',
                 prevSelector: '#slider-prev',
-                nextText: '<i class="fa fa-chevron-right fa-4x"></i>',
-                prevText: '<i class="fa fa-chevron-left fa-4x"></i>'
+                nextText: '<i class="fa fa-chevron-right fa-2x"></i>',
+                prevText: '<i class="fa fa-chevron-left fa-2x"></i>'
             });
 
         });
