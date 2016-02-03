@@ -66,9 +66,6 @@ get_header(); ?>
                 <?php
 
                 $parent = $post->ID;
-
-                //echo ($parent);
-
                 $Dquery = new WP_Query();
                 $Dquery->query('orderby=menu_order&order=ASC&post_parent='.$parent.'&post_type=page');
 
