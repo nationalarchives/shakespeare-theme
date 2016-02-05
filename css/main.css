@@ -343,12 +343,11 @@ margin:0px !important;}
 ===================================*/
 
 .main-banner {
-    background-image: url("../images/bmws-will-signature-m.jpg");
     background-repeat: no-repeat;
     background-size: cover !important;
     height: 255px;
     max-height: 255px;
-    background-position: right;
+    background-position: center !important;
 }
 
 .document-banner {
@@ -365,7 +364,7 @@ margin:0px !important;}
     background-size: cover !important;
     height: 340px;
     max-height: 340px;
-    background-position: center;
+    background-position: left;
 }
 
 /* breadcrumb styles
@@ -481,6 +480,91 @@ margin:0px !important;}
     border: 1px solid #c9c9c9;
 
 }
+.document-slide-thumb{
+    width:200px;
+    height:200px;
+    float:left;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left:10px;
+    margin-bottom: 10px;
+    position: relative;
+    border-bottom:0px !important;
+    text-decoration: none;
+}
+
+.document-slide-thumb a{
+    text-decoration: none;
+}
+.slide-title{
+    width:100%;
+padding:2px;
+    position:absolute;
+    bottom:0px;
+
+}
+.document-slides{
+    width:100%;
+    float:left;
+    height:205px;
+    height:auto;
+    display: inline-block;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    position: relative;
+
+}
+
+.document-slides ul li{
+
+    list-style: none;
+    display: inline-block;
+
+}
+#slider-next,  #slider-prev{
+    display:block;
+    position:absolute;
+    top:140px;
+    border-bottom: 0px !important;
+    z-index: 1000;
+
+}
+#slider-next,  #slider-prev{
+
+    display:block;
+}
+
+#slider-next a,  #slider-prev a{
+    border-bottom: 0px !important;
+    text-decoration: none;
+}
+#slider-next{
+    right:-20px;
+}
+#slider-prev{
+    left:-25px;
+}
+.bxslider{
+    width:635px;
+    height:205px;
+    position: relative;
+}
+.bxslider p{
+    text-align:  center;
+}
+.bxslider a{
+    text-decoration: none !important;
+    border-bottom: 0px !important;
+}
+.bx-viewport{
+    width:70%;
+}
 
 .docpager {
     width: 100%;
@@ -553,7 +637,6 @@ margin:0px !important;}
 .jumbotron {
     width: 100%;
     max-width: 1600px;
-    background-position: top right;
     height: 360px;
     border-radius: 0px;
     margin-bottom: 0px;
@@ -685,6 +768,10 @@ margin:0px !important;}
 
 /* sundry styles
 ===================================*/
+.disabled{
+    display: none;
+}
+
 .separator{
     border-top:1px solid #c9c9c9;
 }
@@ -752,12 +839,18 @@ margin:0px !important;}
 
 /* media queries
 ===================================*/
+
 @media (min-width: 480px) {
+    .bx-viewport{
+        width:100%;
+    }
 
     .action-bg-mobile {
         background-color: #00da00;
         color: #000 !important;
     }
+
+
 }
 @media (max-width: 480px) {
     .info-logos {
@@ -774,6 +867,10 @@ margin:0px !important;}
 }
 
 @media (max-width: 768px) {
+
+    .bx-pager{
+        display:none;
+    }
     .half, .info .half {
         width: 100%;
     }
@@ -900,11 +997,10 @@ margin:0px !important;}
     }
 
     .main-banner {
-        background-image: url("../images/bmws-will-signature.jpg");
         background-size: cover !important;
         height:420px;
         max-height: 420px;
-        background-position: right;
+        background-position: center !important;
     }
 
     .document-banner {
@@ -919,7 +1015,7 @@ margin:0px !important;}
         background-size: cover !important;
         height: 420px;
         max-height: 420px;
-        background-position: bottom right;
+        background-position: bottom left;
     }
 
     .grey-bg-desktop {

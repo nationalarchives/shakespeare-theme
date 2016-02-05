@@ -74,15 +74,65 @@
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
+
+
                         <li <?php if (is_front_page()){?>class="active"<?php }?>><a href="/">About the exhibition</a></li>
-                        <li <?php if (is_page_template("will.php")){?>class="active"<?php }?>><a href="/shakespeares-will/">Shakespeare's will</a></li>
+                        <li <?php
 
-                        <?php if(get_page_by_title('a life in writing')) : ?>
+                            $page1 = get_page_by_path( 'shakespeares-will' );
+                            $parent1 = $page1->ID;
 
 
 
 
-                        <li <?php if (is_page_template("documents.php") or is_page_template("document-viewer.php")){?>class="active"<?php }?>><a href="/a-life-in-writing/">A life in writing</a></li>  <?php endif;?>
+                            if (is_page_template("will.php") or $parent1 == $post->post_parent){?>class="active"<?php }?>><a href="/shakespeares-will/">Shakespeare's will</a></li>
+
+                        <?php if(get_page_by_title('a life in writing')) :
+
+                            $page = get_page_by_title( 'a life in writing' );
+                            $parent = $page->ID;
+
+
+                            ?>
+
+
+
+
+                        <li <?php if (is_page("a-life-in-writing") or $parent == $post->post_parent){?>class="active"<?php }?>><a href="/a-life-in-writing/">A life in writing</a></li>  <?php endif;?>
+
+
+
+                        <?php if(get_page_by_title('conservation')) :
+
+                            $cpage = get_page_by_title( 'conservation' );
+                            $cparent = $cpage->ID;
+
+
+
+                            ?>
+
+
+
+
+                            <li <?php if (is_page("conservation") or $cparent == $post->post_parent){?>class="active"<?php }?>><a href="/conservation/">Conservation</a></li>  <?php endif;?>
+
+
+
+
+                        <?php if(get_page_by_title('events')) :
+
+                            $epage = get_page_by_title( 'events' );
+                            $eparent = $epage->ID;
+
+
+
+                            ?>
+
+
+
+
+                            <li <?php if (is_page("events") or $eparent == $post->post_parent){?>class="active"<?php }?>><a href="/events/">Events</a></li>  <?php endif;?>
+
                     </ul>
 
                 </div>

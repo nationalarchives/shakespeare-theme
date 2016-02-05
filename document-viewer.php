@@ -117,12 +117,28 @@ get_header(); ?>
 
             }?>
             <!-- Custom field here -->
-            <div class="clearfix-padding"></div>
 
-            <a href="<?php echo($image_high); ?>" target="_blank" class="button">View full image</a>
 
 
             <div class="clearfix-padding"></div>
+
+
+
+
+                <?php
+                $transcription = transcription_get_meta( 'transcription_transcription' );
+
+                if ($transcription){
+                    echo ("<h2>Transcription</h2>");
+                    echo("<div class='separator padding-bottom-medium'></div>");
+                    echo (html_entity_decode($transcription));
+                    echo("<div class='separator padding-top-medium'></div>");
+                }
+                ?>
+
+                <div class="clearfix-padding"></div>
+
+                <a href="<?php echo($image_high); ?>" target="_blank" class="button">View full image</a>
 
         </div>
 
