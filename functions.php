@@ -278,4 +278,58 @@ function fix_internal_url($url) {
     return $arrUrl[ 'path' ];
 }
 
+
+function transcription_get_meta( $value ) {
+    global $post;
+
+    $field = get_post_meta( $post->ID, $value, true );
+    if ( ! empty( $field ) ) {
+        return is_array( $field ) ? stripslashes_deep( $field ) : stripslashes( wp_kses_decode_entities( $field ) );
+    } else {
+        return false;
+    }
+}
+
+function transcription_add_meta_box() {
+    add_meta_box(
+        'transcription-transcription',
+        __( 'Transcription', 'transcription' ),
+        'transcription_html',
+        'page',
+        'normal',
+        'high'
+    );
+}
+add_action( 'add_meta_boxes', 'transcription_add_meta_box' );
+
+function transcription_html( $post) {
+    wp_nonce_field( '_transcription_nonce', 'transcription_nonce' ); ?>
+
+    <p>
+    <label for="transcription_transcription"></label><br>
+<?php
+    $settings = array( 'textarea_name' => 'transcription_transcription', 'wpautop'=> false );
+
+    wp_editor( html_entity_decode(transcription_get_meta( 'transcription_transcription')), 'transcription_transcription', $settings );
+
+?>
+<!--    <textarea name="transcription_transcription" id="transcription_transcription" style="width:100%;min-height:300px;">--><?php //echo transcription_get_meta( 'transcription_transcription' ); ?><!--</textarea>-->
+
+    </p><?php
+}
+
+function transcription_save( $post_id ) {
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return;
+    if ( ! isset( $_POST['transcription_nonce'] ) || ! wp_verify_nonce( $_POST['transcription_nonce'], '_transcription_nonce' ) ) return;
+    if ( ! current_user_can( 'edit_post', $post_id ) ) return;
+
+    if ( isset( $_POST['transcription_transcription'] ) )
+        update_post_meta( $post_id, 'transcription_transcription', esc_attr( $_POST['transcription_transcription'] ) );
+}
+add_action( 'save_post', 'transcription_save' );
+
+
+
+
+
 ?>

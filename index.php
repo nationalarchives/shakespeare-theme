@@ -8,18 +8,37 @@ get_header(); ?>
 
 
 
-<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+<?php if (have_posts()): while (have_posts()) : the_post();
 
 
 
-    <div class="jumbotron main main-banner">
+    if ( has_post_thumbnail()) {
 
-        <img src="<?php bloginfo('template_directory'); ?>/images/bmws-by-me-william-shakespeare.png" title="By me William Shakespeare" class="title-img">
+    $image_id = get_post_thumbnail_id($page->ID);
+    $image_high = wp_get_attachment_image_src($image_id, 'full', false);
+    $image_high = fix_internal_url($image_high[0]);
 
-        <h1 class="hidden"> <?php the_title(); ?></h1>
+        ?>
+<div  style="background-image: url(<?php echo($image_high); ?>);" class="jumbotron main will-banner">
+        <?php
+
+
+    }else{
+
+    ?>
+    <div class="jumbotron main will-banner">
+
+            <?php }?>
+
+
+
+
+
+        <h1 class="hidden"><?php the_title(); ?></h1>
 
 
     </div>
+
 
     <div class="container-fluid ">
 

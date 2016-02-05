@@ -61,51 +61,60 @@ get_header(); ?>
 
         <div class="container-fluid padding base dark-grey-bg">
             <div class="padding padding-extra-big">
-            <h2>Explore Shakespeare's will</h2>
-
-            <div class="zoom-viewer">
-
-                <div class="zoom-controls">
-                    <div mag-ctrl="controls">
-                        <button mag-ctrl-zoom-by="0.5" title="Zoom in" id="zoom-in"><i class="fa fa-plus fa-2x"></i></button>
-                        <button mag-ctrl-zoom-by="-0.5" title="Zoom out" id="zoom-out"><i class="fa fa-minus fa-2x"></i></button>
-                        <button mag-ctrl-move-by-y="-0.1" title="Move up" id="move-up"><i class="fa fa-caret-up fa-2x"></i></button>
-                        <button mag-ctrl-move-by-y="0.1" title="Move down" id="move-down"><i class="fa fa-caret-down fa-2x"></i></button>
-                        <button mag-ctrl-move-by-x="-0.1" title="Move left" id="move-left"><i class="fa fa-caret-left fa-2x"></i></button>
-                        <button mag-ctrl-move-by-x="0.1" title="Move right" id="move-right"><i class="fa fa-caret-right fa-2x"></i></button>
-                        <button mag-ctrl-fullscreen title="View fullscreen" id="fullscreen"><i class="fa fa-expand fa-2x"></i></button>
 
 
-                    </div></div>
+                <?php
 
-                <div mag-thumb="controls">
-                   <img src="<?php echo($image_med[0]); ?>" class="zoom-thumb"/>
+                $parent = $post->ID;
+                $Dquery = new WP_Query();
+                $Dquery->query('orderby=menu_order&order=ASC&post_parent='.$parent.'&post_type=page');
+
+                $Dcount = $Dquery->post_count;
+        if ($Dcount >= 1) {
+                ?>
+
+                <div class="document-slides">
+                  <h2>Explore Shakespeare's will</h2>
+                    <div class="clearfix-padding"></div>
+                    <span id="slider-prev"></span>
+                    <span id="slider-next"></span>
+                    <div class="bxslider">
+                        <!-- thumbs go here -->
+                        <?php
+                        while ($Dquery->have_posts()) : $Dquery->the_post();
+
+
+                            $image_id = get_post_thumbnail_id();
+                            $image_url = wp_get_attachment_image_src($image_id, 'medium', false);
+
+                            ?>
+                            <a href="<?php echo get_page_link($Dquery->ID);  ?>" title="View <?php echo get_the_title( $Dquery->ID );?>">
+                                <div class="document-slide-thumb" <?php printf('style="background-image: url(%s)"', $image_url[0]); ?>>
+                                    <div class="slide-title dark-grey-bg"><p><?php echo get_the_title( $Dquery->ID );?></p></div>
+
+
+                                </div>
+
+                            </a>
+
+                        <?php
+                        endwhile;
+                        wp_reset_postdata();
+                        }
+                        ?>
+                        <!-- thumbs go here -->
+
+                    </div>
+
+
+
 
                 </div>
-                <div mag-zoom="controls">
-                    <img src="<?php echo($image_high[0]); ?>" />
-                </div>
 
 
+                <div class="clearfix-padding"></div>
 
 
-            </div>
-
-            <!-- Custom field here -->
-
-            <?php $key="About";
-
-            if ($key) {
-                echo get_post_meta($post->ID, $key, true);
-
-            }?>
-            <!-- Custom field here -->
-            <div class="clearfix-padding"></div>
-
-            <a href="<?php echo($image_high[0]); ?>" target="_blank" class="button">View full image</a>
-
-
-            <div class="clearfix-padding"></div>
 
         </div>
 
