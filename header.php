@@ -99,6 +99,40 @@
 
 
                         <li <?php if (is_page("a-life-in-writing") or $parent == $post->post_parent){?>class="active"<?php }?>><a href="/a-life-in-writing/">A life in writing</a></li>  <?php endif;?>
+
+
+
+                        <?php if(get_page_by_title('conservation')) :
+
+                            $cpage = get_page_by_title( 'conservation' );
+                            $cparent = $cpage->ID;
+
+
+
+                            ?>
+
+
+
+
+                            <li <?php if (is_page("conservation") or $cparent == $post->post_parent){?>class="active"<?php }?>><a href="/conservation/">Conservation</a></li>  <?php endif;?>
+
+
+
+
+                        <?php if(get_page_by_title('events')) :
+
+                            $epage = get_page_by_title( 'events' );
+                            $eparent = $epage->ID;
+
+
+
+                            ?>
+
+
+
+
+                            <li <?php if (is_page("events") or $eparent == $post->post_parent){?>class="active"<?php }?>><a href="/events/">Events</a></li>  <?php endif;?>
+
                     </ul>
 
                 </div>

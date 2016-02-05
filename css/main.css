@@ -364,7 +364,7 @@ margin:0px !important;}
     background-size: cover !important;
     height: 340px;
     max-height: 340px;
-    background-position: center;
+    background-position: left;
 }
 
 /* breadcrumb styles
@@ -637,7 +637,6 @@ padding:2px;
 .jumbotron {
     width: 100%;
     max-width: 1600px;
-    background-position: top right;
     height: 360px;
     border-radius: 0px;
     margin-bottom: 0px;
@@ -851,6 +850,7 @@ padding:2px;
         color: #000 !important;
     }
 
+
 }
 @media (max-width: 480px) {
     .info-logos {
@@ -1015,7 +1015,7 @@ padding:2px;
         background-size: cover !important;
         height: 420px;
         max-height: 420px;
-        background-position: bottom right;
+        background-position: bottom left;
     }
 
     .grey-bg-desktop {
