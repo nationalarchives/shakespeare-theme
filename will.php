@@ -53,9 +53,6 @@ get_header(); ?>
 
     if (is_page("shakespeares-will")){
 
-        $image_id = get_post_thumbnail_id($page->ID);
-        $image_high = wp_get_attachment_image_src($image_id,'full', false);
-        $image_med = wp_get_attachment_image_src($image_id,'thumbnail', false);
 
         ?>
 
@@ -86,10 +83,11 @@ get_header(); ?>
 
                             $image_id = get_post_thumbnail_id();
                             $image_url = wp_get_attachment_image_src($image_id, 'medium', false);
+                            $image_src = fix_internal_url($image_url[0]);
 
                             ?>
                             <a href="<?php echo get_page_link($Dquery->ID);  ?>" title="View <?php echo get_the_title( $Dquery->ID );?>">
-                                <div class="document-slide-thumb" <?php printf('style="background-image: url(%s)"', $image_url[0]); ?>>
+                                <div class="document-slide-thumb" <?php printf('style="background-image: url(%s)"', $image_src); ?>>
                                     <div class="slide-title dark-grey-bg"><p><?php echo get_the_title( $Dquery->ID );?></p></div>
 
 
