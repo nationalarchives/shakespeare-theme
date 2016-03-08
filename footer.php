@@ -175,5 +175,7 @@ if (is_page_template("document-viewer.php")){
 <!-- End Twitter single-event website tag code -->
 
 
+<?php wp_footer();?>
+
 	</body>
 </html>
