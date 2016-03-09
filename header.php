@@ -102,9 +102,9 @@
 
 
 
-                        <?php if(get_page_by_title('conservation')) :
+                        <?php if(get_page_by_title('curators')) :
 
-                            $cpage = get_page_by_title( 'conservation' );
+                            $cpage = get_page_by_title( 'curators' );
                             $cparent = $cpage->ID;
 
 
@@ -114,7 +114,7 @@
 
 
 
-                            <li <?php if (is_page("conservation") or $cparent == $post->post_parent){?>class="active"<?php }?>><a href="/conservation/">Conservation</a></li>  <?php endif;?>
+                            <li <?php if (is_page("curators") or $cparent == $post->post_parent){?>class="active"<?php }?>><a href="/curators/">Curators</a></li>  <?php endif;?>
 
 
 
