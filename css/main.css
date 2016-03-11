@@ -8,7 +8,7 @@
 body {
     font-family: 'Open Sans', Arial, Verdana, 'Helvetica', 'Helvetica Neue Interface', 'Helvetica Neue', sans-serif;
     color: #000;
-    background-color: #f1edea;
+    background-color: #e1e1e1;
     padding-top: 50px;
 }
 
@@ -47,9 +47,13 @@ a:hover {
 }
 
 .green-left-border {
-    border-left: 15px solid #00da00;
+    border-left: 25px solid #00da00;
 }
 
+
+.grey-left-border {
+    border-left: 25px solid #5e5e60;
+}
 .grey {
     color: #5e5e60;
 }
@@ -62,8 +66,8 @@ a:hover {
     background-color: transparent;
 }
 
-.grey-bg-mobile {
-    background-color: #5e5e60;
+.action-bg-mobile {
+    background-color: #d3d3d3;
     color: #f1edea !important;
 }
 
@@ -103,24 +107,44 @@ h2, .h2 {
 h3, .h3 {
     font-size: 1.4em;
 }
-
+.dark-grey-bg h3 {
+line-height: 1.4em !important;
+}
+.dark-grey-bg h2, .dark-grey-bg p{
+    color: #fff;
+}
+.dark-grey-bg a {
+    color: #fff;
+    border-bottom: 1px dotted #fff;
+}
+.dark-grey-bg a:hover {
+    color: #fff;
+    border-bottom: none;
+}
 /* button styles
 ===================================*/
 
 .black .button, .black a .button{
     border: 1px solid #000;
-    background-color: transparent;
-    padding: 5px;
-    color: #000;
+    background-color: #000;
+    padding: 10px;
+    color: #fff;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
+    font-size: 1.2em;
+    white-space: nowrap;
+}
+
+.black .button:hover{
+    background-color: #5e5e60;
+    border:1px solid #5e5e60;
 }
 
 a.button, .info-box a.button, a .ticket-button {
     border: 1px solid #fff;
     background-color: transparent;
-    padding: 5px;
+    padding: 10px;
     color: #fff;
     cursor: pointer;
     text-decoration: none;
@@ -133,18 +157,25 @@ a.button:hover {
     background-color: #000;
     color: #f1edea;
     text-decoration: none;
-
 }
 
-.ticket-button {
+.navbar-fixed-top .button {
     background-color: #5e5e60;
     border: 1px solid #f1edea;
     color: #f1edea;
     float: right;
     position: relative;
     top: 10px;
+    padding:5px !important;
 }
+span.edit-button{
+    border:1px solid #000;
+    padding:10px;
+    margin-bottom: 20px;
+    display : inline-block;
+    width:auto;
 
+}
 
 
 /* custom responsive grid selectors
@@ -156,9 +187,10 @@ a.button:hover {
     max-width: 1600px;
     margin-left: auto;
     margin-right: auto;
+    background-color: #f1edea;
 }
 
-.half {
+.half, .one-third, .two-thirds{
     width: 100%;
     float: left;
 }
@@ -167,7 +199,7 @@ a.button:hover {
     width: 50%;
     float: left;
     height: auto;
-    min-height: 150px;
+    min-height: 210px;
     position: relative;
 }
 
@@ -176,9 +208,12 @@ a.button:hover {
     top: 0;
     left: 0;
 }
+.positioner .button{
+    margin-top: 37%;
+}
 
 .main {
-    padding: 60px 15px 0px 15px !important;
+    padding: 60px 15px 0px 25px !important;
     text-align: left;
 }
 
@@ -192,6 +227,14 @@ a.button:hover {
 .float-right {
     float: right !important;
 }
+.alignright{
+    float:right !important;
+    margin-left: 10px;
+}
+.alignleft{
+    float:left !important;
+    margin-right:10px;
+}
 
 /* padding and margins
 ===================================*/
@@ -203,9 +246,16 @@ a.button:hover {
 .padding-left-extra {
     padding-left: 15px !important;
 }
+.padding-left-extra-big {
+    padding-left: 40px !important;
+}
 
 .padding-left-small {
     padding-left: 5px !important;
+}
+
+.padding-right-small {
+    padding-right: 5px !important;
 }
 
 .padding-extra-big {
@@ -213,11 +263,32 @@ a.button:hover {
 }
 
 .padding-top-extra {
-    padding-top: 15px !important;
+    padding-top: 0px !important;
 }
 
 .padding-top-small {
     padding-top: 5px !important;
+}
+.padding-top-medium {
+    padding-top:10px !important;
+}
+.padding-top-large {
+    padding-top:20px !important;
+}
+.padding-big-pc{
+    padding:3.2% 2% 2% 2% !important;
+}
+.padding-bottom-medium {
+    padding-bottom:10px !important;
+}
+
+/* margins
+===================================*/
+.margin-none{
+margin:0px !important;}
+}
+.margin-small{
+    margin:2px !important;
 }
 
 /* info panel
@@ -227,17 +298,18 @@ a.button:hover {
     width: 100%;
     min-height: 50px;
     position: relative;
-    display: inline-block;
-    padding-top: 5px;
+    padding-top: 0px;
+
 }
 
 .info .half {
     width: 48%;
+
 }
 
-.info .half:first-of-type {
-    width: 100%;
-}
+/*.info .half:first-of-type {*/
+    /*width: 100%;*/
+/*}*/
 
 .info-img {
     width: 100%;
@@ -249,7 +321,7 @@ a.button:hover {
     float: left;
     width: auto !important;
     padding-right: 10px;
-    padding-top: 3%;
+    padding-top: 0px;
 }
 
 .info-logos a {
@@ -266,25 +338,24 @@ a.button:hover {
     margin-right: 10px;
 }
 
+
 /* banner image styles
 ===================================*/
 
 .main-banner {
-    background-image: url("../images/bmws-will-signature-m.jpg");
     background-repeat: no-repeat;
     background-size: cover !important;
     height: 255px;
     max-height: 255px;
-    background-position: right;
+    background-position: center !important;
 }
 
 .document-banner {
-    background-image: url("../images/bmws-revels.jpg");
     background-repeat: no-repeat;
     background-size: cover !important;
-    height: 340px;
-    max-height: 340px;
-    background-position: center;
+    height: 255px;
+    max-height: 255px;
+    background-position: center !important;
 }
 
 .will-banner {
@@ -293,7 +364,7 @@ a.button:hover {
     background-size: cover !important;
     height: 340px;
     max-height: 340px;
-    background-position: center;
+    background-position: left;
 }
 
 /* breadcrumb styles
@@ -318,10 +389,10 @@ a.button:hover {
 
 .zoom-viewer{
     position: relative;
-    width:90%;
+    width:100%;
     height:auto;
     min-height: 450px;
-    max-width: 1024px;
+    max-width: 1280px;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
@@ -356,6 +427,7 @@ a.button:hover {
 }
 
 .zoom-controls{
+    display:none;
     width:60px;
     position: absolute;
     right: 15px;
@@ -407,6 +479,91 @@ a.button:hover {
     margin-left: 20px;
     border: 1px solid #c9c9c9;
 
+}
+.document-slide-thumb{
+    width:200px;
+    height:200px;
+    float:left;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left:10px;
+    margin-bottom: 10px;
+    position: relative;
+    border-bottom:0px !important;
+    text-decoration: none;
+}
+
+.document-slide-thumb a{
+    text-decoration: none;
+}
+.slide-title{
+    width:100%;
+padding:2px;
+    position:absolute;
+    bottom:0px;
+
+}
+.document-slides{
+    width:100%;
+    float:left;
+    height:205px;
+    height:auto;
+    display: inline-block;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    position: relative;
+
+}
+
+.document-slides ul li{
+
+    list-style: none;
+    display: inline-block;
+
+}
+#slider-next,  #slider-prev{
+    display:block;
+    position:absolute;
+    top:140px;
+    border-bottom: 0px !important;
+    z-index: 1000;
+
+}
+#slider-next,  #slider-prev{
+
+    display:block;
+}
+
+#slider-next a,  #slider-prev a{
+    border-bottom: 0px !important;
+    text-decoration: none;
+}
+#slider-next{
+    right:-20px;
+}
+#slider-prev{
+    left:-25px;
+}
+.bxslider{
+    width:635px;
+    height:205px;
+    position: relative;
+}
+.bxslider p{
+    text-align:  center;
+}
+.bxslider a{
+    text-decoration: none !important;
+    border-bottom: 0px !important;
+}
+.bx-viewport{
+    width:70%;
 }
 
 .docpager {
@@ -471,6 +628,7 @@ a.button:hover {
 .container-fluid {
     max-width: 1600px;
     padding: 0px;
+    margin-top:0px;
 }
 
 /* jumbotron tweaks
@@ -479,10 +637,10 @@ a.button:hover {
 .jumbotron {
     width: 100%;
     max-width: 1600px;
-    background-position: top right;
-    height: 250px;
+    height: 360px;
     border-radius: 0px;
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 .jumbotron .info-box {
@@ -522,6 +680,8 @@ a.button:hover {
     border-color: #5e5e60;
     width:100%;
     max-width: 1600px !important;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
@@ -580,7 +740,7 @@ a.button:hover {
 .theme{
 
     width:95%;
-    max-width: 400px;
+    max-width: 460px;
     height:300px;
     min-height: 200px;
     position: relative;
@@ -589,23 +749,35 @@ a.button:hover {
     background-repeat: no-repeat;
     margin-right: auto;
     margin-left: auto;
+    text-align: center;
 
 }
 .theme .caption{
     width:100%;
-    text-align: left;
+    text-align: left !important;
     display: inline-block;
     padding: 5px;
     position: absolute;
     bottom: 0px;
     left:0px;
-    background-color: #f1edea;
     max-width: 400px;
+    background-color: #404040;
+    color:#fff;
 }
 
 
 /* sundry styles
 ===================================*/
+.disabled{
+    display: none;
+}
+
+.separator{
+    border-top:1px solid #c9c9c9;
+}
+.textwidget{
+    display:inline;
+}
 
 .border-top-dotted {
     border-top: 1px solid #5e5e60;
@@ -616,10 +788,11 @@ a.button:hover {
     height: auto;
     max-width: 760px;
     border: 1px solid #c9c9c9;
+    margin: 10px;
 }
 
 
-.caption, .breadcrumb {
+.caption, .breadcrumb, .wp-caption-text {
     font-size: .9em;
     color: #5e5e60;
     display: inline-block;
@@ -659,11 +832,56 @@ a.button:hover {
     clear: both;
     padding-top: 10px;
 }
+.clearfix-padding-extra{
+    clear: both;
+    padding-top: 20px;
+}
 
 /* media queries
 ===================================*/
 
+@media (min-width: 480px) {
+    .bx-viewport{
+        width:100%;
+    }
+
+    .action-bg-mobile {
+        background-color: #00da00;
+        color: #000 !important;
+    }
+
+
+}
+@media (max-width: 480px) {
+    .info-logos {
+        width: 100% !important;
+        text-align: center;
+    }
+    .vertical-half{
+        width:100%;
+        min-height: 90px;
+    }
+    .positioner .button {
+        margin-top:5%;
+    }
+}
+
 @media (max-width: 768px) {
+
+    .bx-pager{
+        display:none;
+    }
+    .half, .info .half {
+        width: 100%;
+    }
+    .tna-logo{
+        max-height: 27px !important;;
+    }
+    .info-logos img {
+        max-height: 60px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
 
     .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
         background-color: #5e5e60;
@@ -697,6 +915,50 @@ a.button:hover {
 
 @media (min-width: 768px) {
 
+
+    .navbar-fixed-top {
+        position: fixed !important;
+        min-height: 50px !important;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+
+    }
+
+    .padding-top-extra {
+        padding-top: 15px !important;
+    }
+    .zoom-viewer{
+        position: relative;
+        width:90%;
+        height:auto;
+        min-height: 450px;
+        max-width: 1280px;
+        overflow: hidden;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom:20px;
+        margin-top: 20px;
+        border:10px solid #000;
+    }
+
+    .zoom-controls{
+        width:60px;
+        position: absolute;
+        right: 15px;
+        top:20px;
+        background-color: rgba(0,0,0,0.8) !important;
+        padding-top:10px;
+        margin-left: auto;
+        margin-right: auto;
+        height:auto;
+        overflow: hidden;
+        z-index: 1000;
+        text-align:center;
+        border:1px solid #000;
+        display:block;
+    }
+
     .zoom-viewer {
         height: 640px;
 
@@ -710,6 +972,7 @@ a.button:hover {
         border-radius: 0px;
         margin-bottom: 0px;
         position: relative;
+        margin-top:0px !important;
     }
 
     .jumbotron .info-box {
@@ -734,37 +997,32 @@ a.button:hover {
     }
 
     .main-banner {
-        background-image: url("../images/bmws-will-signature.jpg");
         background-size: cover !important;
-        height: 340px;
-        max-height: 340px;
-        background-position: right;
+        height:420px;
+        max-height: 420px;
+        background-position: center !important;
     }
 
     .document-banner {
-        background-image: url("../images/bmws-revels.jpg");
         background-size: cover !important;
-        height: 340px;
-        max-height: 340px;
-        background-position: center;
+        height: 420px;
+        max-height: 420px;
+        background-position: center !important;
     }
 
     .will-banner {
         background-image: url("../images/bmws-will-complete.jpg");
         background-size: cover !important;
-        height: 340px;
-        max-height: 340px;
-        background-position: bottom right;
+        height: 420px;
+        max-height: 420px;
+        background-position: bottom left;
     }
 
     .grey-bg-desktop {
         background-color: #5e5e60;
     }
 
-    .grey-bg-mobile {
-        background-color: transparent;
-        color: #000 !important;
-    }
+
 
     .grey-bg-mobile a {
         color: #000;
@@ -781,22 +1039,37 @@ a.button:hover {
     .vertical-half {
         width: 100%;
         height: auto;
-        min-height: 230px;
+        min-height: 210px;
         position: relative;
     }
 
     .half {
-        width: 50%;
+        width: 49% !important;
+        float: left;
+
+    }
+
+    .one-third{
+        width: 30%;
+        float: left;
+
+    }
+
+    .two-thirds{
+        width:68%;
         float: left;
     }
-
     .positioner {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        /*position: absolute;*/
+        /*top: 50%;*/
+        /*left: 50%;*/
+        /*transform: translate(-50%, -50%);*/
+        margin-top:20px;
+        margin-left:20px;
     }
-
+    .positioner .button{
+        margin-top: 10%;
+    }
     .info {
         width: 100%;
         min-height: 50px;
@@ -806,10 +1079,13 @@ a.button:hover {
 
     .title-img {
         width: 80%;
-        max-width: 968px;
+        max-width:659px;
         margin-left: 0px;
         display: block;
-        padding-top:70px;
+        padding-top:110px;
+        box-shadow:none;
+        -moz-box-shadow: none;
+        border:0px !important;
     }
 
     .info-logos {
@@ -822,11 +1098,65 @@ a.button:hover {
         width: 48%;
     }
 
-    .info {
 
+
+    .info {
         z-index: 5000;
-        -webkit-box-shadow: 0px 1px 1px #5e5e60;
-        -moz-box-shadow: 0px 1px 1px #5e5e60;
-        box-shadow: 0px 1px 1px #5e5e60;
+        -webkit-box-shadow: 0px 1px 0px #5e5e60;
+        -moz-box-shadow: 0px 1px 0px #5e5e60;
+        box-shadow: 0px 1px 0px #5e5e60;
+    }
+
+    .info-logos img {
+        max-height: 80px;
+    }
+    .tna-logo{
+        max-height: 40px !important;;
+    }
+
+}
+
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .positioner .button {
+        margin-top: 15%;
+    }
+    .half, .info .half {
+        width: 100%;
+    }
+    .half .half{
+        width: 49%;
+
+    }
+    .info-logos {
+width:100% !important;
+        text-align: center;
     }
 }
+
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 1) {
+
+    .info-logos{
+        width: 49% !important;
+
+    }
+.info{
+    position: relative;
+    display: block;
+}
+    .navbar-fixed-top {
+        position: relative !important;
+        min-height: 50px !important;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+}
+
+
